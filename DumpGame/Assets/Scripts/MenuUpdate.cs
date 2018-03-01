@@ -7,17 +7,50 @@ using UnityEngine.UI;
 public class MenuUpdate : MonoBehaviour {
     public GameObject TimeText;
     public Text ScoreText, LivesText;
-    public int Score, Lives;
-    public float Time;
-    public string TextGame1;
+    public int Score, Lives, Win, rvalue;
+    public float T;
+    public string NextGame, finish;
 
 	// Use this for initialization
 	void Start ()
     {
-        Score = 0;
-        Lives = 3;
-        Time = TimeText.GetComponent<Countdown>().T;
-        TextGame1 = "TextGame1";
+        finish = "MainMenu";
+        rvalue = Random.Range(0,3);
+
+        Lives = PlayerPrefs.GetInt("PLives");
+        Score = PlayerPrefs.GetInt("PScore");
+        Win = PlayerPrefs.GetInt("Result");
+        if (Win == 1)
+        {
+            Score++;
+            PlayerPrefs.SetInt("PScore", Score);
+        }
+        else if (Win == 0)
+        {
+            Lives--;
+            PlayerPrefs.SetInt("PLives", Lives);
+        }
+
+        if (Score == 15)
+            SceneManager.LoadScene(finish);
+        if (Lives == 0)
+            SceneManager.LoadScene(finish);
+
+        if (Score == 12)
+            PlayerPrefs.SetFloat("PTime", 2);
+        if (Score == 8)
+            PlayerPrefs.SetFloat("PTime", 3);
+        if (Score == 4)
+            PlayerPrefs.SetFloat("PTime", 4);
+
+        T =  PlayerPrefs.GetFloat("PTime");
+
+        if(rvalue == 0)
+            NextGame = "TextGame1";
+        else if (rvalue == 1)
+            NextGame = "TextGame2";
+        else
+            NextGame = "TextGame3";
         ScoreText.text = Score.ToString() + " POINTS";
         LivesText.text = Lives.ToString() + " LIVES";
 
@@ -26,15 +59,14 @@ public class MenuUpdate : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        Time = TimeText.GetComponent<Countdown>().T;
-        if (Time < 0)
+        T = TimeText.GetComponent<Countdown>().T;
+        if (T < 0)
             end();
     }
 
     void end()
     {
-       // Application.LoadLevel(TextGame1);
-       SceneManager.LoadScene(TextGame1);
+       SceneManager.LoadScene(NextGame);
     }
 
 }

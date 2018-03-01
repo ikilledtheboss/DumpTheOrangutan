@@ -14,3 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MainMenu.unity
     guid: 44d1085bcfc349b48bf5cdde6110ebc6
+  - enabled: 1
+    path: Assets/TextGame2.unity
+    guid: 08dba0eafa1ee864892baa070ca30b4e
+  - enabled: 1
+    path: Assets/TextGame3.unity
+    guid: c9b1305f79b81a44ab299d9936275d09
