@@ -493,10 +493,10 @@ MonoBehaviour:
   Curtain2: {fileID: 0}
   ScoreKeeper: {fileID: 0}
   PhoneSR: {fileID: 0}
-  Phone0: {fileID: 21300000, guid: 9a96dba01221c054782845a71864af9f, type: 3}
-  Phone2: {fileID: 21300000, guid: 2837b76e033119c4d845b912f8b4f527, type: 3}
-  Phone3: {fileID: 21300000, guid: 81db878f23d9d264397eeaddd3124ae3, type: 3}
-  Phone4: {fileID: 21300000, guid: a455ebaff270913489a5374df210170f, type: 3}
+  Phone0: {fileID: 21300000, guid: 9f57a948315380a4786685983e543cde, type: 3}
+  Phone2: {fileID: 21300000, guid: 220bbf487df3ea042956d2b1f187fa34, type: 3}
+  Phone3: {fileID: 21300000, guid: f7111f57098d47d43a05c5a76001af8f, type: 3}
+  Phone4: {fileID: 21300000, guid: 5fa719a9695e4dd4793b8fb50ea8dfe3, type: 3}
   Progress: 0
   Win: 0
   C1: 0
