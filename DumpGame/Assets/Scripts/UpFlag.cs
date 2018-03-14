@@ -9,7 +9,7 @@ public class UpFlag : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        a = 14f;
+        a = 16f;
         b = 0.40f;
     }
 

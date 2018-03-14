@@ -15,7 +15,7 @@ public class MenuUpdate : MonoBehaviour {
 	void Start ()
     {
         finish = "MainMenu";
-        rvalue = Random.Range(0,3);
+        rvalue = Random.Range(0,2);
 
         Lives = PlayerPrefs.GetInt("PLives");
         Score = PlayerPrefs.GetInt("PScore");
@@ -48,9 +48,7 @@ public class MenuUpdate : MonoBehaviour {
         if(rvalue == 0)
             NextGame = "TextGame1";
         else if (rvalue == 1)
-            NextGame = "TextGame2";
-        else
-            NextGame = "TextGame3";
+            NextGame = "GolfGame";
         ScoreText.text = Score.ToString() + " POINTS";
         LivesText.text = Lives.ToString() + " LIVES";
 

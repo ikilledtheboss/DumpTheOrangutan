@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TextGame3.unity
     guid: c9b1305f79b81a44ab299d9936275d09
+  - enabled: 1
+    path: Assets/GolfGame.unity
+    guid: 0591c1b2a38fae74eb14b7fd7f843031

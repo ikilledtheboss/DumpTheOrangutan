@@ -81,6 +81,7 @@ public class GameplayClick : MonoBehaviour
             default:
                 break;
         }
+
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result",Win);
