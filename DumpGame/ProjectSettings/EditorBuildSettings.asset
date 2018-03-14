@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GolfGame.unity
     guid: 0591c1b2a38fae74eb14b7fd7f843031
+  - enabled: 1
+    path: Assets/HomeGame.unity
+    guid: 9cc8c1b451246a8478dd4e08c0e0dd66
