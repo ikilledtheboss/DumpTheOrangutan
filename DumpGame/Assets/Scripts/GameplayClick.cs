@@ -16,7 +16,6 @@ public class GameplayClick : MonoBehaviour
 
 	void Start ()
     {
-        
         StageScene = "StageScene";
         Progress = 1;
         Win = 0;
@@ -84,6 +83,7 @@ public class GameplayClick : MonoBehaviour
 
         if (T < 0)
         {
+
             PlayerPrefs.SetInt("Result",Win);
             SceneManager.LoadScene(StageScene);
         }

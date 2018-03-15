@@ -517,7 +517,7 @@ MonoBehaviour:
   Lives: 3
   Score: -1
   PResult: 1
-  Time: 5
+  Time: 5.5
 --- !u!61 &1141946268
 BoxCollider2D:
   m_ObjectHideFlags: 0

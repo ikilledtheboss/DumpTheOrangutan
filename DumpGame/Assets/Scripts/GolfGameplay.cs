@@ -62,9 +62,9 @@ public class GolfGameplay : MonoBehaviour
             if (clicked == false)
             {
                 if ((T % 2) < 1)
-                    MeterSR.sprite = Meter1;
-                else
                     MeterSR.sprite = Meter2;
+                else
+                    MeterSR.sprite = Meter1;
             }
         }   
     }
