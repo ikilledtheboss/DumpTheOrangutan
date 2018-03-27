@@ -13,9 +13,14 @@ public class GolfGameplay : MonoBehaviour
     public Sprite Meter1, Meter2, Player1, Player2, Hole1, Hole2;
     public float T;
     public string StageScene;
-    
+    public Text ScoreText, LivesText, RuleText, TimeText;
+    public double tt;
+
     void Start()
     {
+        ScoreText.enabled = false;
+        LivesText.enabled = false;
+        RuleText.enabled = false;
         StageScene = "StageScene";
         clicked = false;
         Win = 0;
@@ -24,6 +29,7 @@ public class GolfGameplay : MonoBehaviour
         GoalSR = Goal.GetComponent<SpriteRenderer>();
         T = PlayerPrefs.GetFloat("PTime");
         Curtain1.GetComponent<UpFlag>().enabled = true;
+        tt = T;
     }
     
     void Update()
@@ -54,11 +60,15 @@ public class GolfGameplay : MonoBehaviour
         if (T< 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            SceneManager.LoadScene(StageScene);
+            Curtain1.GetComponent<DownFlag>().enabled = true;
+            Curtain1.GetComponent<PresentResults>().enabled = true;
+            Golfer.GetComponent<GolfGameplay>().enabled = false;
         }
+
         else
         {
             T = T - Time.deltaTime;
+
             if (clicked == false)
             {
                 if ((T % 2) < 1)
