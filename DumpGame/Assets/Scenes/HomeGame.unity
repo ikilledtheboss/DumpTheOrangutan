@@ -614,6 +614,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a10675aa2505fd438f39c8b6d3af4f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Curtain: {fileID: 0}
+  CurtainSR: {fileID: 0}
 --- !u!1 &1508058701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1125,7 @@ MonoBehaviour:
   Count: {fileID: 2080794850}
   T: 0
   S: 0
-  t: 0
+  tt: 0
 --- !u!1 &2091356495
 GameObject:
   m_ObjectHideFlags: 0
