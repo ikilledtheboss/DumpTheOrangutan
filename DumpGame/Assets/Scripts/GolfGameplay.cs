@@ -43,7 +43,7 @@ public class GolfGameplay : MonoBehaviour
                 if (MeterSR.sprite == Meter1)
                 {
                     Win = 1;
-                    GolferSR.sprite = Player1;
+                    GolferSR.sprite = Player2;
                     GoalSR.sprite = Hole1;
 
                 }

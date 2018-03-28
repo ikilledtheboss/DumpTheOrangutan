@@ -564,7 +564,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: da47861494c33f046ab94fc8b0d6ccd5, type: 3}
+  m_Sprite: {fileID: 21300024, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -580,13 +580,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1265327728}
-  m_LocalRotation: {x: -0, y: -0, z: -0.30295306, w: 0.95300555}
-  m_LocalPosition: {x: -8.88, y: -3.24, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.97, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35.27}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1362290529
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +658,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1362290529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.3, z: -0.02}
+  m_LocalPosition: {x: -0.2, y: 0.3, z: -0.02}
   m_LocalScale: {x: 9.870431, y: 10.345478, z: 7.5069184}
   m_Children: []
   m_Father: {fileID: 0}
@@ -786,7 +786,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: da47861494c33f046ab94fc8b0d6ccd5, type: 3}
+  m_Sprite: {fileID: 21300010, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -803,8 +803,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1389835059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.62, y: 0.21, z: 0}
-  m_LocalScale: {x: 1, y: 2.5250013, z: 1}
+  m_LocalPosition: {x: -0.34, y: -3.96, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -831,12 +831,12 @@ MonoBehaviour:
   MeterSR: {fileID: 0}
   GolferSR: {fileID: 0}
   GoalSR: {fileID: 0}
-  Meter1: {fileID: 21300000, guid: 0e1ed438ff2401c4190cbac346f63804, type: 3}
-  Meter2: {fileID: 21300000, guid: da47861494c33f046ab94fc8b0d6ccd5, type: 3}
-  Player1: {fileID: 21300000, guid: 0e1ed438ff2401c4190cbac346f63804, type: 3}
-  Player2: {fileID: 21300000, guid: 5b16882a05064d4489796961cc6b3a17, type: 3}
-  Hole1: {fileID: 21300000, guid: 0e1ed438ff2401c4190cbac346f63804, type: 3}
-  Hole2: {fileID: 21300000, guid: 5b16882a05064d4489796961cc6b3a17, type: 3}
+  Meter1: {fileID: 21300024, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
+  Meter2: {fileID: 21300022, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
+  Player1: {fileID: 21300010, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
+  Player2: {fileID: 21300004, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
+  Hole1: {fileID: 21300014, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
+  Hole2: {fileID: 21300008, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
   T: 0
   StageScene: 
   ScoreText: {fileID: 1539802569}
@@ -968,7 +968,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: da47861494c33f046ab94fc8b0d6ccd5, type: 3}
+  m_Sprite: {fileID: 21300026, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -985,8 +985,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1780400720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.61, y: 3.47, z: 0}
-  m_LocalScale: {x: 0.31500036, y: 1.25, z: 1}
+  m_LocalPosition: {x: 8.61, y: 2.17, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
