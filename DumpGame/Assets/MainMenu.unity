@@ -751,7 +751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a10675aa2505fd438f39c8b6d3af4f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Curtain: {fileID: 0}
+  Curtain: {fileID: 624726953}
   CurtainSR: {fileID: 0}
 --- !u!114 &624726958
 MonoBehaviour:

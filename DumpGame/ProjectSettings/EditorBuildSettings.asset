@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ImmigrantGame.unity
     guid: f437cfd204670a94498f825832c9c425
+  - enabled: 1
+    path: Assets/WallGame.unity
+    guid: 56e8ecd38605344459c02d9181ba8959

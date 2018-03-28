@@ -19,7 +19,7 @@ public class PresentResults : MonoBehaviour
     {
         Curtain.GetComponent<Countdown>().enabled = true;
         finish = "MainMenu";
-        rvalue = Random.Range(0, 3);
+        rvalue = Random.Range(0, 4);
         Lives = PlayerPrefs.GetInt("PLives");
         Score = PlayerPrefs.GetInt("PScore");
         Win = PlayerPrefs.GetInt("Result");
@@ -64,6 +64,11 @@ public class PresentResults : MonoBehaviour
             RuleText.text = "CLICK the guilty party";
         }
 
+        else if (rvalue == 3)
+        {
+            NextGame = "WallGame";
+            RuleText.text = "CLICK on the broken wall to fix";
+        }
         ScoreText.text = Score.ToString() + " POINTS";
         LivesText.text = Lives.ToString() + " LIVES";
 

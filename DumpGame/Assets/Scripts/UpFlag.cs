@@ -24,8 +24,8 @@ public class UpFlag : MonoBehaviour
         }
         else
         {
-            this.enabled = false;
             CurtainSR.enabled = false;
+            this.enabled = false;
         }
     }
 }

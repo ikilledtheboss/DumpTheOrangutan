@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GamePhone : MonoBehaviour
 {
-    public GameObject Covfefe1, Covfefe2, Covfefe3, Phone, Curtain1, Curtain2, ScoreKeeper;
+    public GameObject Covfefe1, Covfefe2, Covfefe3, Phone, Curtain, ScoreKeeper;
     public SpriteRenderer PhoneSR;
     public Sprite Phone0, Phone2, Phone3, Phone4;
     public int Progress, Win;
@@ -30,7 +30,7 @@ public class GamePhone : MonoBehaviour
         C3 = Covfefe3.GetComponent<ClickItem>().Clicked;
         FlagDown = false;
         T = PlayerPrefs.GetFloat("PTime");
-        Curtain1.GetComponent<UpFlag>().enabled = true;
+        Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
     }
 
@@ -91,8 +91,8 @@ public class GamePhone : MonoBehaviour
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            Curtain1.GetComponent<DownFlag>().enabled = true;
-            Curtain1.GetComponent<PresentResults>().enabled = true;
+            Curtain.GetComponent<DownFlag>().enabled = true;
+            Curtain.GetComponent<PresentResults>().enabled = true;
             Phone.GetComponent<GamePhone>().enabled = false;
         }
         else

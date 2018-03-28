@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhoneButtonRandom : MonoBehaviour {
+public class PhoneButtonRandom : MonoBehaviour
+{
 
     public GameObject Current;
     public SpriteRenderer CurrentSR;
