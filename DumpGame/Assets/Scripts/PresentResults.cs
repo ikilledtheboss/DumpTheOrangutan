@@ -60,7 +60,7 @@ public class PresentResults : MonoBehaviour
         }
         else if (rvalue == 2)
         {
-            NextGame = "ImmigrantGame";
+            NextGame = "ImmigrantsGame";
             RuleText.text = "CLICK the guilty party";
         }
 

@@ -44,3 +44,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SodaGame.unity
     guid: eac9c0fa2210b754687571c9f7d5fb95
+  - enabled: 1
+    path: Assets/ImmigrantsGame.unity
+    guid: 95c7b0a9ff9893d48b3f2c7916b326f8
