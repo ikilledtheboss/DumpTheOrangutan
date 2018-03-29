@@ -19,7 +19,7 @@ public class PresentResults : MonoBehaviour
     {
         Curtain.GetComponent<Countdown>().enabled = true;
         finish = "MainMenu";
-        rvalue = Random.Range(0, 5);
+        rvalue = Random.Range(0, 6);
         Lives = PlayerPrefs.GetInt("PLives");
         Score = PlayerPrefs.GetInt("PScore");
         Win = PlayerPrefs.GetInt("Result");
@@ -74,6 +74,12 @@ public class PresentResults : MonoBehaviour
         {
             NextGame = "MoneyGame";
             RuleText.text = "DRAG the money to the visitor";
+        }
+
+        else if (rvalue == 5)
+        {
+            NextGame = "AirportGame";
+            RuleText.text = "CLICK on the Muslim";
         }
         ScoreText.text = Score.ToString() + " POINTS";
         LivesText.text = Lives.ToString() + " LIVES";

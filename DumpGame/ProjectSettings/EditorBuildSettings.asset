@@ -38,3 +38,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MoneyGame.unity
     guid: c4686af5f924fe549a651b65506b07c9
+  - enabled: 1
+    path: Assets/AirportGame.unity
+    guid: 444a56d80ab901543947ff8dd30ea816
