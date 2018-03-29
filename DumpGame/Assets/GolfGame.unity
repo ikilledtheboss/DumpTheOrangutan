@@ -253,7 +253,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 14, y: -163}
-  m_SizeDelta: {x: 253.67, y: 30}
+  m_SizeDelta: {x: 308.4, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &511968640
 GameObject:
@@ -831,8 +831,8 @@ MonoBehaviour:
   MeterSR: {fileID: 0}
   GolferSR: {fileID: 0}
   GoalSR: {fileID: 0}
-  Meter1: {fileID: 21300024, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
-  Meter2: {fileID: 21300022, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
+  Meter1: {fileID: 21300022, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
+  Meter2: {fileID: 21300024, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
   Player1: {fileID: 21300010, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
   Player2: {fileID: 21300004, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}
   Hole1: {fileID: 21300014, guid: d57d88e48b1d9cc4ab51e9c4f6798b17, type: 3}

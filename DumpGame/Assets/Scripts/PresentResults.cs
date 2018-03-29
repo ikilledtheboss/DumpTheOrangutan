@@ -19,7 +19,7 @@ public class PresentResults : MonoBehaviour
     {
         Curtain.GetComponent<Countdown>().enabled = true;
         finish = "MainMenu";
-        rvalue = Random.Range(0, 4);
+        rvalue = Random.Range(0, 5);
         Lives = PlayerPrefs.GetInt("PLives");
         Score = PlayerPrefs.GetInt("PScore");
         Win = PlayerPrefs.GetInt("Result");
@@ -68,6 +68,12 @@ public class PresentResults : MonoBehaviour
         {
             NextGame = "WallGame";
             RuleText.text = "CLICK on the broken wall to fix";
+        }
+
+        else if (rvalue == 4)
+        {
+            NextGame = "MoneyGame";
+            RuleText.text = "DRAG the money to the visitor";
         }
         ScoreText.text = Score.ToString() + " POINTS";
         LivesText.text = Lives.ToString() + " LIVES";
