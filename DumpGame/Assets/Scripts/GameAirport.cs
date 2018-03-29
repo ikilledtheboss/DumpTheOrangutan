@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameAirport : MonoBehaviour {
 
-    public GameObject p1, p2, p3, p4, p5, p6, p7, p8, p9, Immigrant, Dump, Curtain, ScoreKeeper;
+    public GameObject Immigrant, Dump, Curtain, ScoreKeeper;
     public SpriteRenderer DumpSR;
-    public Sprite s1, s2, s3, s4, s5, s6, s7, s8, s9, im;
+    public Sprite im;
     public int Win;
     public bool Clicked;
     public float T;
@@ -35,15 +35,6 @@ public class GameAirport : MonoBehaviour {
         if (Clicked == true)
         {
             DumpSR.enabled = true;
-            p1.GetComponent<SpriteRenderer>().sprite = s1;
-            p2.GetComponent<SpriteRenderer>().sprite = s2;
-            p3.GetComponent<SpriteRenderer>().sprite = s3;
-            p4.GetComponent<SpriteRenderer>().sprite = s4;
-            p5.GetComponent<SpriteRenderer>().sprite = s5;
-            p6.GetComponent<SpriteRenderer>().sprite = s6;
-            p7.GetComponent<SpriteRenderer>().sprite = s7;
-            p8.GetComponent<SpriteRenderer>().sprite = s8;
-            p9.GetComponent<SpriteRenderer>().sprite = s9;
             Immigrant.GetComponent<SpriteRenderer>().sprite = im;
             Win = 1;
         }
