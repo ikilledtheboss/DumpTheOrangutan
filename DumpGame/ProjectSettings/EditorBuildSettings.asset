@@ -41,3 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AirportGame.unity
     guid: 444a56d80ab901543947ff8dd30ea816
+  - enabled: 1
+    path: Assets/SodaGame.unity
+    guid: eac9c0fa2210b754687571c9f7d5fb95
