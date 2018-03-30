@@ -20,3 +20,30 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TextGame3.unity
     guid: c9b1305f79b81a44ab299d9936275d09
+  - enabled: 1
+    path: Assets/GolfGame.unity
+    guid: 0591c1b2a38fae74eb14b7fd7f843031
+  - enabled: 1
+    path: Assets/HomeGame.unity
+    guid: 9cc8c1b451246a8478dd4e08c0e0dd66
+  - enabled: 1
+    path: Assets/ImmigrantGame.unity
+    guid: f437cfd204670a94498f825832c9c425
+  - enabled: 1
+    path: Assets/WallGame.unity
+    guid: 56e8ecd38605344459c02d9181ba8959
+  - enabled: 1
+    path: Assets/GameMoney.unity
+    guid: 97802981b04112a46b49a25af91e2656
+  - enabled: 1
+    path: Assets/MoneyGame.unity
+    guid: c4686af5f924fe549a651b65506b07c9
+  - enabled: 1
+    path: Assets/AirportGame.unity
+    guid: 444a56d80ab901543947ff8dd30ea816
+  - enabled: 1
+    path: Assets/SodaGame.unity
+    guid: eac9c0fa2210b754687571c9f7d5fb95
+  - enabled: 1
+    path: Assets/ImmigrantsGame.unity
+    guid: 95c7b0a9ff9893d48b3f2c7916b326f8

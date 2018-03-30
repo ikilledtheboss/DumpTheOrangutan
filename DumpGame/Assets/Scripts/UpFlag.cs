@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class UpFlag : MonoBehaviour
 {
-    float a, b;
+    float Length, Iteration;
+    public GameObject Curtain;
+    public SpriteRenderer CurtainSR;
 
-    // Use this for initialization
     void Start()
     {
-        a = 14f;
-        b = 0.40f;
+        Length = 16f;
+        Iteration = 0.50f;
+        CurtainSR = Curtain.GetComponent<SpriteRenderer>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if (a > 0)
+        if (Length > 0)
         {
-            transform.Translate(0, b, 0);
-            a -= b;
+            transform.Translate(0, Iteration, 0);
+            Length -= Iteration;
         }
         else
         {
+            CurtainSR.enabled = false;
             this.enabled = false;
         }
     }
