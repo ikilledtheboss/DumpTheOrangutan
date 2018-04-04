@@ -7,7 +7,21 @@ using UnityEngine.Timeline;
 public class TimeLineChoice : MonoBehaviour
 {
     public List<PlayableDirector> playableDirectors;
-    public GameObject Ball, Button;
+    public GameObject Ball, Button, Curtain;
+    public bool beginning;
+
+    void Start()
+    {
+        beginning = false;
+    }
+    void Update()
+    {
+        if (Curtain.GetComponent<UpFlag>().enabled == false && beginning == false)
+        {
+            playableDirectors[2].Play();
+            beginning = true;
+        }
+    }
 
     public void Play()
     {

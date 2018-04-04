@@ -39,7 +39,7 @@ public class GameMoney : MonoBehaviour
             y1 = Money1.transform.position.y;
             if (y1 >= 0)
             {
-                Progress++;
+                Progress=4;
                 M1++;
                 Money1.GetComponent<ClickDragItem>().enabled = false;
                 Money1.GetComponent<SpriteRenderer>().enabled = false;
@@ -123,10 +123,11 @@ public class GameMoney : MonoBehaviour
                 break;
             case (3):
                 Pilesr.sprite = Pile3;
+                Win = 1;
                 break;
             case (4):
                 Pilesr.sprite = Pile4;
-                Win = 1;
+                Win = 0;
                 break;
             default:
                 break;

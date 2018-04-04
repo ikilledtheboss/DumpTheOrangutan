@@ -35,6 +35,14 @@ public class StartGame : MonoBehaviour
         PlayerPrefs.SetInt ("PScore", Score);
         PlayerPrefs.SetFloat ("PTime", Time);
         PlayerPrefs.SetInt("Result",PResult);
+
+        PlayerPrefs.SetInt("Repeat1", -1);
+        PlayerPrefs.SetInt("Repeat2", -1);
+      //  PlayerPrefs.SetInt("Repeat3", -1);
+
+        PlayerPrefs.SetInt("CurrentRepeat", 1);
+        PlayerPrefs.SetInt("CurrentSets", 1);
+
         Curtain.GetComponent<DownFlag>().enabled = true;
         t1.GetComponent<Text>().enabled = false;
         t2.GetComponent<Text>().enabled = false;

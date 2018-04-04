@@ -711,7 +711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 133, y: -138}
+  m_AnchoredPosition: {x: 133, y: -134.67102}
   m_SizeDelta: {x: 321.4, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1181934350
@@ -1319,10 +1319,16 @@ MonoBehaviour:
   Score: 0
   Lives: 0
   Win: 0
-  rvalue: 0
+  rvalue1: 0
+  rvalue2: 0
+  rep1: 0
+  rep2: 0
+  rep3: 0
+  rep4: 0
+  orderrep: 0
+  orderset: 0
   T: 0
   NextGame: 
-  finish: 
   tt: 0
 --- !u!114 &2071325099
 MonoBehaviour:
@@ -1407,7 +1413,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2071325097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.32, y: -0.3, z: -2.97}
+  m_LocalPosition: {x: 0.32, y: -0.01, z: -2.97}
   m_LocalScale: {x: 6.008619, y: 6.2427187, z: 6.2427187}
   m_Children: []
   m_Father: {fileID: 0}

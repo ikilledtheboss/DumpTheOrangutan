@@ -308,7 +308,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -336,7 +336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50.2, y: -126.9}
+  m_AnchoredPosition: {x: 7, y: -139}
   m_SizeDelta: {x: 321.4, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1181934350
@@ -704,10 +704,16 @@ MonoBehaviour:
   Score: 0
   Lives: 0
   Win: 0
-  rvalue: 0
+  rvalue1: 0
+  rvalue2: 0
+  rep1: 0
+  rep2: 0
+  rep3: 0
+  rep4: 0
+  orderrep: 0
+  orderset: 0
   T: 0
   NextGame: 
-  finish: 
   tt: 0
 --- !u!114 &2071325099
 MonoBehaviour:
