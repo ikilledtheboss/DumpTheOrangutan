@@ -35,9 +35,16 @@ public class PresentResults : MonoBehaviour
         }
 
         if (Score == 15)
-            SceneManager.LoadScene(finish);
+        {
+            NextGame = "WinScreen";
+            SceneManager.LoadScene(NextGame);
+        }
         if (Lives == 0)
-            SceneManager.LoadScene(finish);
+        {
+            NextGame = "LoseScreen";
+            SceneManager.LoadScene(NextGame);
+        }
+
 
         if (Score == 12)
             PlayerPrefs.SetFloat("PTime", 2.5f);
@@ -50,7 +57,7 @@ public class PresentResults : MonoBehaviour
 
         if (rvalue == 0)
         {
-            NextGame = "GolfGame";
+            NextGame = "GolfAnimatedGame";
             RuleText.text = "TIME your golf stroke by clicking the mouse";
         }
         else if (rvalue == 1)

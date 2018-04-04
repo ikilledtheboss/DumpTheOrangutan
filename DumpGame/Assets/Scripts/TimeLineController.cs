@@ -7,12 +7,23 @@ using UnityEngine.Timeline;
 public class TimeLineController : MonoBehaviour
 {
     public List<PlayableDirector> playableDirectors;
+    public List<PlayableDirector> stopableDirectors;
     public List<TimelineAsset> timelines;
+    public  bool a = false;
     public void Play()
     {
         foreach (PlayableDirector playableDirector in playableDirectors)
         {
             playableDirector.Play();
+        }
+    }
+
+    public void Pause()
+    {
+        foreach (PlayableDirector stopableDirector in stopableDirectors)
+        {
+            a = true;
+            stopableDirector.Pause();
         }
     }
 

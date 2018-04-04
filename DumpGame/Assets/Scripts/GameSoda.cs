@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class GameSoda : MonoBehaviour
 {
-    public GameObject Drink, Dump, Curtain, ScoreKeeper;
+    public GameObject Drink, Curtain, ScoreKeeper;
     public SpriteRenderer Drinksr;
     public Sprite D0, D2, D3, D4, D5;
     public int Progress, Win, Dragged;
     public float T, Dx, Dy, Chug;
     public Text ScoreText, LivesText, RuleText, TimeText;
     public double tt;
+    public bool InHold;
     
     void Start ()
     {
@@ -32,6 +33,8 @@ public class GameSoda : MonoBehaviour
         Dragged = Drink.GetComponent<ClickDragItem>().Drag;
         Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
+
+        InHold = false;
     }
 	
 	void Update ()
@@ -51,35 +54,6 @@ public class GameSoda : MonoBehaviour
                 Drinksr.sprite = D3;
             else if (Chug >= 0.4f)
                 Drinksr.sprite = D2;
-
-            if (Dx > 8.3f || Dx < -8.3f)
-            {
-                Drinksr.sprite = D0;
-                Win = 0;
-                Progress = 0;
-            }
-            else if (Dy < -5.5 || Dy > 4.3f)
-            {
-                Drinksr.sprite = D0;
-                Win = 0;
-                Progress = 0;
-            }
-
-           else if(Dy < 1.4f && Dx < 4.5f && Dx > -4.3f )
-            {
-                Drinksr.sprite = D0;
-                Win = 0;
-                Progress = 0;
-            }
-            else if(Dy < -3.3f && Dx > -8.3 && Dx < -4.4f)
-            {
-                if(Progress == 2)
-                {
-                    Drinksr.sprite = D5;
-                    Win = 1;
-                    Progress = 0;
-                }
-            }
         }
 
         if(Dragged == 2 && Win != 1)
@@ -94,16 +68,38 @@ public class GameSoda : MonoBehaviour
             PlayerPrefs.SetInt("Result", Win);
             Curtain.GetComponent<DownFlag>().enabled = true;
             Curtain.GetComponent<PresentResults>().enabled = true;
-            Dump.GetComponent<GameSoda>().enabled = false;
+            Drink.GetComponent<GameSoda>().enabled = false;
         }
 
         else
         {
             T = T - Time.deltaTime;
-
-            if(Dx < 4.5f && Dx > 0.3f && Dy > 1.4f && Dy < 4.3f)
+            if (InHold == true)
             {
                 Chug = Chug + Time.deltaTime;
+            }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("HoldSpace"))
+        {
+            InHold = true;
+        }
+
+        if (other.CompareTag("BadSpace"))
+        {
+            InHold = false;
+        }
+
+        if (other.CompareTag("WinSpace"))
+        {
+            if (Progress == 2)
+            {
+                Drinksr.sprite = D5;
+                Win = 1;
+                Progress = 0;
             }
         }
     }
