@@ -791,11 +791,17 @@ MonoBehaviour:
   Score: 0
   Lives: 0
   Win: 0
-  rvalue: 0
+  rvalue1: 0
+  rvalue2: 0
+  rep1: 0
+  rep2: 0
+  rep3: 0
+  rep4: 0
+  orderrep: 0
+  orderset: 0
   T: 0
+  Finish: 0
   NextGame: 
-  finish: 
-  tt: 0
 --- !u!114 &624726960
 MonoBehaviour:
   m_ObjectHideFlags: 0

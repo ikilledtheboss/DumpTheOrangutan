@@ -11,13 +11,15 @@ public class PresentResults : MonoBehaviour
     public Text ScoreText, LivesText, RuleText;
     public int Score, Lives, Win, rvalue1, rvalue2, rep1, rep2, rep3, rep4, orderrep, orderset;
     public float T;
+    public bool Finish;
     public string NextGame;
-    public double tt;
 
     // Use this for initialization
     void Start()
     {
-        Curtain.GetComponent<Countdown>().enabled = true;
+        Finish = false;
+        TimeText.GetComponent<Countdown>().Start();
+        TimeText.GetComponent<Countdown>().enabled = true;
         Lives = PlayerPrefs.GetInt("PLives");
         Score = PlayerPrefs.GetInt("PScore");
         Win = PlayerPrefs.GetInt("Result");
@@ -32,12 +34,9 @@ public class PresentResults : MonoBehaviour
             Lives--;
             PlayerPrefs.SetInt("PLives", Lives);
         }
-
+        
         if (Score == 15)
-        {
-            NextGame = "WinScreen";
-            SceneManager.LoadScene(NextGame);
-        }
+            Finish = true;
         if (Lives == 0)
         {
             NextGame = "LoseScreen";
@@ -61,72 +60,80 @@ public class PresentResults : MonoBehaviour
         }
 
         T = PlayerPrefs.GetFloat("PTime");
+        
+        if (Finish == true)
+        {
+            NextGame = "VoteGame";
+            RuleText.text = "VOTE FOR THE PRESIDENT";
+        }
+        else
+        {
+            rvalue2 = RandomValue();
+            if (rvalue2 == 0)
+            {
+                NextGame = "GolfAnimatedGame";
+                RuleText.text = "DUMP RESORT: TAP at the right moment";
+            }
+            else if (rvalue2 == 1)
+            {
+                NextGame = "TextGame1";
+                RuleText.text = "COVFEFE: TAP the correct letters";
+            }
+            else if (rvalue2 == 2)
+            {
+                NextGame = "SodaGame";
+                RuleText.text = "CHUG DIET SODA: CLICK and DRAG soda to Dump's mouth";
+            }
 
-        rvalue2 = RandomValue();
-       
-        if (rvalue2 == 0)
-        {
-            NextGame = "GolfAnimatedGame";
-            RuleText.text = "DUMP RESORT: TAP at the right moment";
-        }
-        else if (rvalue2 == 1)
-        {
-            NextGame = "TextGame1";
-            RuleText.text = "TCOVFEFE: TAP the correct letters";
-        }
-        else if (rvalue2 == 2)
-        {
-            NextGame = "SodaGame";
-            RuleText.text = "CHUG DIET SODA: CLICK and DRAG soda to Dump's mouth";
-        }
+            else if (rvalue2 == 3)
+            {
+                NextGame = "WallGame";
+                RuleText.text = "BUILD THE WALL: TAP to place missing bricks";
+            }
 
-        else if (rvalue2 == 3)
-        {
-            NextGame = "WallGame";
-            RuleText.text = "BUILD THE WALL: TAP to place missing bricks";
-        }
+            else if (rvalue2 == 4)
+            {
+                NextGame = "MoneyGame";
+                RuleText.text = "PORN STAR HUSH MONEY: CLICK and DRAG only 130,000 dollars";
+            }
 
-        else if (rvalue2 == 4)
-        {
-            NextGame = "MoneyGame";
-            RuleText.text = "PORN STAR HUSH MONEY: CLICK and DRAG only 130,000 dollars";
-        }
+            else if (rvalue2 == 5)
+            {
+                NextGame = "AirportGame";
+                RuleText.text = "KEEP THOSE MUSLIMS OUT!: TAP on the muslim";
+            }
 
-        else if (rvalue2 == 5)
-        {
-            NextGame = "AirportGame";
-            RuleText.text = "KEEP THOSE MUSLIMS OUT!: TAP on the muslim";
-        }
+            else if (rvalue2 == 6)
+            {
+                NextGame = "ImmigrantsGame";
+                RuleText.text = "KEEP THOSE IMMIGRANTS OUT!: TAP on the immigrant";
+            }
 
-        else if (rvalue2 == 6)
-        {
-            NextGame = "ImmigrantsGame";
-            RuleText.text = "KEEP THOSE IMMIGRANTS OUT!: TAP on the immigrant";
-        }
+            else if (rvalue2 == 7)
+            {
+                NextGame = "KeyGame";
+                RuleText.text = "READY THE NUKES: TAP the keys in time";
+            }
 
-        else if (rvalue2 == 7)
-        {
-            NextGame = "KeyGame";
-            RuleText.text = "READY THE NUKES: TAP the keys in time";
+            else if (rvalue2 == 8)
+            {
+                NextGame = "GrabWomanGame";
+                RuleText.text = "GRAB THE PUSSY: TAP to grab the pussy";
+            }
         }
 
         ScoreText.text = Score.ToString() + " POINTS";
         LivesText.text = Lives.ToString() + " LIVES";
-
-        tt = T;
-
+        
     }
+
     
     void Update()
     {
         if (T < 0)
             end();
         else
-        {
-            T = Curtain.GetComponent<Countdown>().T;
-            tt = Curtain.GetComponent<Countdown>().tt;
-            TimeText.GetComponent<Text>().text = tt.ToString() + " Seconds Left";
-        }
+            T = TimeText.GetComponent<Countdown>().T;
     }
 
     void end()
@@ -148,21 +155,21 @@ public class PresentResults : MonoBehaviour
         else if (orderset == 2)
         {
             if (rvalue1 == 0)
-                rvalue2 = Random.Range(4, 8);
+                rvalue2 = Random.Range(4, 9);
             else
                 rvalue2 = Random.Range(0, 4);
         }
         else if (orderset == 3)
         {
             if (rvalue1 <= 1)
-                rvalue2 = Random.Range(4, 8);
+                rvalue2 = Random.Range(4, 9);
             else
                 rvalue2 = Random.Range(0, 4);
         }
         else if (orderset == 4)
         {
             if (rvalue1 <= 2)
-                rvalue2 = Random.Range(4, 8);
+                rvalue2 = Random.Range(4, 9);
             else
                 rvalue2 = Random.Range(0, 4);
         }
@@ -172,7 +179,7 @@ public class PresentResults : MonoBehaviour
             if (rvalue2 == 0)
                 rvalue2 = 3;
             else if (rvalue2 == 4)
-                rvalue2 = 7;
+                rvalue2 = 8;
             else
                 rvalue2--;
         }

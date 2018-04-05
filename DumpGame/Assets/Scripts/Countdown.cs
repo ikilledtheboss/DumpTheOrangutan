@@ -12,7 +12,7 @@ public class Countdown : MonoBehaviour
     public int S;
     public double tt;
 
-	void Start ()
+	public void Start ()
     {
         S = PlayerPrefs.GetInt("PScore");
         if(S < 4)
@@ -43,9 +43,9 @@ public class Countdown : MonoBehaviour
         }
         else
         {
-            if (T < tt)
+           if (T < tt)
                tt = Math.Floor(T);
-            T = T - Time.deltaTime;
+           T = T - Time.deltaTime;
            Count.text = tt.ToString() + " Seconds Left";
         }
 	}
