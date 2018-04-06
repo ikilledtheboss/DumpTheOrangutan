@@ -45,22 +45,16 @@ public class GameSoda : MonoBehaviour
             Dx = Drink.transform.position.x;
             Dy = Drink.transform.position.y;
 
-            if (Chug >= 1.2f)
+            if (Chug >= 1.8f)
             {
-                Progress = 2;
-                Drinksr.sprite = D4;
+                Drinksr.sprite = D5;
+                Win = 1;
+                Progress = 0;
             }
-            else if (Chug >= 0.8f)
+            else if (Chug >= 1.2f)
                 Drinksr.sprite = D3;
-            else if (Chug >= 0.4f)
+            else if (Chug >= 0.6f)
                 Drinksr.sprite = D2;
-        }
-
-        if(Dragged == 2 && Win != 1)
-        {
-            Drinksr.sprite = D0;
-            Win = 0;
-            Progress = 0;
         }
 
         if (T < 0)
@@ -92,15 +86,6 @@ public class GameSoda : MonoBehaviour
         {
             InHold = false;
         }
-
-        if (other.CompareTag("WinSpace"))
-        {
-            if (Progress == 2)
-            {
-                Drinksr.sprite = D5;
-                Win = 1;
-                Progress = 0;
-            }
-        }
+        
     }
 }
