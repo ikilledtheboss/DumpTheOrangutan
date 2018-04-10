@@ -43,17 +43,17 @@ public class PresentResults : MonoBehaviour
             SceneManager.LoadScene(NextGame);
         }
 
-        if (Score == 12)
+        if (Score >= 11)
         {
             PlayerPrefs.SetInt("CurrentSets", 4);
             PlayerPrefs.SetFloat("PTime", 3.5f);
         }
-        if (Score == 8)
+        else if (Score >= 7)
         { 
             PlayerPrefs.SetInt("CurrentSets", 3);
             PlayerPrefs.SetFloat("PTime", 4.5f);
         }
-        if (Score == 4)
+        else if (Score >= 3)
         {
             PlayerPrefs.SetInt("CurrentSets", 2);
             PlayerPrefs.SetFloat("PTime", 5.5f);
@@ -120,6 +120,16 @@ public class PresentResults : MonoBehaviour
                 NextGame = "GrabWomanGame";
                 RuleText.text = "GRAB THE PUSSY: TAP to grab the pussy";
             }
+            else if (rvalue2 == 9)
+            {
+                NextGame = "ParisGame";
+                RuleText.text = "Drag the Pen! Sign the papers!!!! ";
+            }
+            else if (rvalue2 == 10)
+            {
+                NextGame = "PipeGame";
+                RuleText.text = "Drag the pipes to the pipeline";
+            }
         }
 
         ScoreText.text = Score.ToString() + " POINTS";
@@ -155,21 +165,21 @@ public class PresentResults : MonoBehaviour
         else if (orderset == 2)
         {
             if (rvalue1 == 0)
-                rvalue2 = Random.Range(4, 9);
+                rvalue2 = Random.Range(4, 11);
             else
                 rvalue2 = Random.Range(0, 4);
         }
         else if (orderset == 3)
         {
             if (rvalue1 <= 1)
-                rvalue2 = Random.Range(4, 9);
+                rvalue2 = Random.Range(4, 11);
             else
                 rvalue2 = Random.Range(0, 4);
         }
         else if (orderset == 4)
         {
             if (rvalue1 <= 2)
-                rvalue2 = Random.Range(4, 9);
+                rvalue2 = Random.Range(4, 11);
             else
                 rvalue2 = Random.Range(0, 4);
         }
@@ -179,7 +189,7 @@ public class PresentResults : MonoBehaviour
             if (rvalue2 == 0)
                 rvalue2 = 3;
             else if (rvalue2 == 4)
-                rvalue2 = 8;
+                rvalue2 = 10;
             else
                 rvalue2--;
         }

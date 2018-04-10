@@ -65,3 +65,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/VoteGame.unity
     guid: 1624cbae24dba84489d240d633d868d4
+  - enabled: 1
+    path: Assets/ParisGame.unity
+    guid: 3a19fd118d2dad345b2a18cb690d26a8
+  - enabled: 1
+    path: Assets/PipeGame.unity
+    guid: 826add491eb21f64097f5bbda4f81ebf
