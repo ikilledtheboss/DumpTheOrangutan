@@ -1675,8 +1675,8 @@ MonoBehaviour:
   orderrep: 0
   orderset: 0
   T: 0
+  Finish: 0
   NextGame: 
-  tt: 0
 --- !u!114 &2071325099
 MonoBehaviour:
   m_ObjectHideFlags: 0
