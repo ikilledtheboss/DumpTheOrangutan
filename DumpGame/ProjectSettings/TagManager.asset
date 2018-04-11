@@ -7,6 +7,7 @@ TagManager:
   - HoldSpace
   - WinSpace
   - BadSpace
+  - collide
   layers:
   - Default
   - TransparentFX
