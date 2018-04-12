@@ -122,8 +122,8 @@ public class PresentResults : MonoBehaviour
             }
             else if (rvalue2 == 9)
             {
-                NextGame = "ParisGame";
-                RuleText.text = "Drag the Pen! Sign the papers!!!! ";
+                NextGame = "EarthGame";
+                RuleText.text = "CLICK THE USA to exit the Paris agreement";
             }
             else if (rvalue2 == 10)
             {

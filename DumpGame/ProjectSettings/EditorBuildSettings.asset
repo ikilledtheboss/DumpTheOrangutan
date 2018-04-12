@@ -71,3 +71,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PipeGame.unity
     guid: 826add491eb21f64097f5bbda4f81ebf
+  - enabled: 1
+    path: Assets/GameTemplate.unity
+    guid: fb8efd5c2155b5d49b5203025526fb85
