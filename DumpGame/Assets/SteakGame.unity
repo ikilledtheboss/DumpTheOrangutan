@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 395769650}
   - component: {fileID: 395769651}
   - component: {fileID: 395769652}
+  - component: {fileID: 395769653}
   m_Layer: 0
   m_Name: ColliderB
   m_TagString: collide
@@ -579,6 +580,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameSteakScript: {fileID: 1971160866}
+--- !u!50 &395769653
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 395769649}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &445624973
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,6 +610,7 @@ GameObject:
   - component: {fileID: 445624974}
   - component: {fileID: 445624975}
   - component: {fileID: 445624976}
+  - component: {fileID: 445624977}
   m_Layer: 0
   m_Name: ColliderR
   m_TagString: collide
@@ -646,6 +668,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameSteakScript: {fileID: 1971160866}
+--- !u!50 &445624977
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 445624973}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &495379353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1374,7 @@ GameObject:
   - component: {fileID: 1324135285}
   - component: {fileID: 1324135286}
   - component: {fileID: 1324135287}
+  - component: {fileID: 1324135288}
   m_Layer: 0
   m_Name: ColliderT
   m_TagString: collide
@@ -1389,6 +1432,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameSteakScript: {fileID: 1971160866}
+--- !u!50 &1324135288
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324135284}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &1971160866 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114647035436625248, guid: 8bea83196b64640619f3bdc272a2eec8,
