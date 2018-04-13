@@ -16,7 +16,7 @@ public class GameSteakColliderScript : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter(Collider other)
+	void OnTriggerEnter2D(Collider2D other)
 	{
 		print ("Collided");
 		if(other.gameObject.tag=="SteakKetchup")
