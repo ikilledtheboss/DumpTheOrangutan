@@ -181,6 +181,20 @@ Prefab:
       propertyPath: TimeText
       value: 
       objectReference: {fileID: 1115742269}
+    - target: {fileID: 61390408380550120, guid: 8bea83196b64640619f3bdc272a2eec8,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979196127160930, guid: 8bea83196b64640619f3bdc272a2eec8, type: 2}
+      propertyPath: m_TagString
+      value: SteakKetchup
+      objectReference: {fileID: 0}
+    - target: {fileID: 114647035436625248, guid: 8bea83196b64640619f3bdc272a2eec8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8bea83196b64640619f3bdc272a2eec8, type: 2}
   m_IsPrefabParent: 0
@@ -507,6 +521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 395769650}
   - component: {fileID: 395769651}
+  - component: {fileID: 395769652}
   m_Layer: 0
   m_Name: ColliderB
   m_TagString: collide
@@ -552,6 +567,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.7295694, y: 4.157303}
   m_EdgeRadius: 0
+--- !u!114 &395769652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 395769649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a35e198e771145b5a7c4bbb9c1c4b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameSteakScript: {fileID: 1971160866}
 --- !u!1 &445624973
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445624974}
   - component: {fileID: 445624975}
+  - component: {fileID: 445624976}
   m_Layer: 0
   m_Name: ColliderR
   m_TagString: collide
@@ -606,6 +634,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.3452873, y: 8.228851}
   m_EdgeRadius: 0
+--- !u!114 &445624976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 445624973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a35e198e771145b5a7c4bbb9c1c4b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameSteakScript: {fileID: 1971160866}
 --- !u!1 &495379353
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,6 +932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1229317321}
   - component: {fileID: 1229317322}
+  - component: {fileID: 1229317323}
   m_Layer: 0
   m_Name: ColliderL
   m_TagString: collide
@@ -937,6 +978,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.345269, y: 7.1088877}
   m_EdgeRadius: 0
+--- !u!114 &1229317323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1229317320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a35e198e771145b5a7c4bbb9c1c4b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameSteakScript: {fileID: 1971160866}
 --- !u!1 &1250357737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1324135285}
   - component: {fileID: 1324135286}
+  - component: {fileID: 1324135287}
   m_Layer: 0
   m_Name: ColliderT
   m_TagString: collide
@@ -1302,3 +1356,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.108887, y: 2.5467558}
   m_EdgeRadius: 0
+--- !u!114 &1324135287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324135284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a35e198e771145b5a7c4bbb9c1c4b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameSteakScript: {fileID: 1971160866}
+--- !u!114 &1971160866 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114647035436625248, guid: 8bea83196b64640619f3bdc272a2eec8,
+    type: 2}
+  m_PrefabInternal: {fileID: 247113663}
+  m_Script: {fileID: 11500000, guid: bf92272f8820c4a4db0d5cf9608dc15c, type: 3}
