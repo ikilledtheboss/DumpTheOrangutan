@@ -74,3 +74,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GameTemplate.unity
     guid: fb8efd5c2155b5d49b5203025526fb85
+  - enabled: 1
+    path: Assets/EarthGame.unity
+    guid: 9c4fbf9d944ab3541a80d28ff8feb183
