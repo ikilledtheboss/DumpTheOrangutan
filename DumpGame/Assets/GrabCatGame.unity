@@ -834,6 +834,41 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.7262189
       objectReference: {fileID: 0}
+    - target: {fileID: 212100222019178270, guid: 2cb5c255d47f942d28a99745acfbc90e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212100222019178270, guid: 2cb5c255d47f942d28a99745acfbc90e,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212889276537391222, guid: 2cb5c255d47f942d28a99745acfbc90e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212100222019178270, guid: 2cb5c255d47f942d28a99745acfbc90e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212786013297332538, guid: 2cb5c255d47f942d28a99745acfbc90e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 212862332277115224, guid: 2cb5c255d47f942d28a99745acfbc90e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212033047333125656, guid: 2cb5c255d47f942d28a99745acfbc90e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cb5c255d47f942d28a99745acfbc90e, type: 2}
   m_IsPrefabParent: 0
@@ -877,8 +912,14 @@ PlayableDirector:
     value: {fileID: 920439343}
   - key: {fileID: 114842046099548684, guid: cbd0a12e9647a4419ae15a1d5d41e123, type: 2}
     value: {fileID: 70802649}
-  - key: {fileID: 114415058614470826, guid: cbd0a12e9647a4419ae15a1d5d41e123, type: 2}
-    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 2010101751}
+  - key: {fileID: 0}
+    value: {fileID: 2010101751}
+  - key: {fileID: 0}
+    value: {fileID: 2010101751}
+  - key: {fileID: 114859522556324974, guid: cbd0a12e9647a4419ae15a1d5d41e123, type: 2}
+    value: {fileID: 2010101751}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1125422642
