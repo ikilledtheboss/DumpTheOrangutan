@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameBuildWall : MonoBehaviour
 {
-    public GameObject Wall1, Wall2, Wall3, Wall4, Wall5, Button1, Button2, Button3, Store, Curtain;
+    public GameObject Wall1, Wall2, Wall3, Wall4, Wall5, Button1, Button2, Button3, Store, Cloud1, Cloud2, Cloud3, Curtain;
     public Sprite store, ThirdWall;
     public int Progress, Win;
-    public float T;
+    public float T, Iteration;
     public Text ScoreText, LivesText, RuleText, TimeText;
     public double tt;
 
@@ -25,6 +25,7 @@ public class GameBuildWall : MonoBehaviour
         T = PlayerPrefs.GetFloat("PTime");
         Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
+        Iteration = 0.03f;
     }
 	
     public void FirstClick()
@@ -72,6 +73,9 @@ public class GameBuildWall : MonoBehaviour
                 Button3.GetComponent<Button>().interactable = true;
             }
         }
+        Cloud1.transform.Translate(Iteration, 0, 0);
+        Cloud2.transform.Translate(-Iteration, 0, 0);
+        Cloud3.transform.Translate(Iteration, 0, 0);
 
         if (T < 0)
         {

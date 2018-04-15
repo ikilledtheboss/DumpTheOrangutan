@@ -715,7 +715,6 @@ MonoBehaviour:
   D8: {fileID: 21300000, guid: 3ffeb01b7922ffc4195f65139298c10f, type: 3}
   Progress: 0
   Win: 0
-  Dragged: 0
   T: 0
   Chug: 0
   ScoreText: {fileID: 1987644865}
@@ -1069,7 +1068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2071325098
 MonoBehaviour:
   m_ObjectHideFlags: 0

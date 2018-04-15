@@ -9,7 +9,7 @@ public class GameSodaTap : MonoBehaviour {
     public GameObject Drink, Curtain, ScoreKeeper;
     public SpriteRenderer Drinksr;
     public Sprite D0, D2, D3, D4, D5, D6, D7, D8;
-    public int Progress, Win, Dragged;
+    public int Progress, Win;
     public float T, Chug;
     public Text ScoreText, LivesText, RuleText, TimeText;
     public double tt, Track;
@@ -31,7 +31,6 @@ public class GameSodaTap : MonoBehaviour {
         else if (T < 4)
             Chug = 0.50f;
 
-        Dragged = Drink.GetComponent<ClickDragItem>().Drag;
         Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
 
