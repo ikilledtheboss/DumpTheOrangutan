@@ -705,14 +705,14 @@ MonoBehaviour:
   Curtain: {fileID: 2071325097}
   ScoreKeeper: {fileID: 0}
   Drinksr: {fileID: 0}
-  D0: {fileID: 21300000, guid: 6a386e26b3526f949934563f5c62a99d, type: 3}
-  D2: {fileID: 21300000, guid: 8bbd3e47f4344fa458d553448461667d, type: 3}
+  D0: {fileID: 21300000, guid: 3ffeb01b7922ffc4195f65139298c10f, type: 3}
+  D2: {fileID: 21300000, guid: 6a386e26b3526f949934563f5c62a99d, type: 3}
   D3: {fileID: 21300000, guid: 42be41f44bf90f24c9d6e40a5fb39068, type: 3}
   D4: {fileID: 21300000, guid: c4f9f7b440cf07b4985a7beb597f9525, type: 3}
   D5: {fileID: 21300000, guid: 00458ced20f25b14e9f3bedaaf86f4f3, type: 3}
   D6: {fileID: 21300000, guid: 00458ced20f25b14e9f3bedaaf86f4f3, type: 3}
-  D7: {fileID: 21300000, guid: f0ff3c57404df7f4fa10548752cc3237, type: 3}
-  D8: {fileID: 21300000, guid: 3ffeb01b7922ffc4195f65139298c10f, type: 3}
+  D7: {fileID: 21300000, guid: 7fb879c5df7d39d4d8f2bdf5513f0a79, type: 3}
+  D8: {fileID: 21300000, guid: 7fb879c5df7d39d4d8f2bdf5513f0a79, type: 3}
   Progress: 0
   Win: 0
   T: 0
