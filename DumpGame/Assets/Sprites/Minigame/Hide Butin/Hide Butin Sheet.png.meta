@@ -1,25 +1,29 @@
 fileFormatVersion: 2
-guid: d57d88e48b1d9cc4ab51e9c4f6798b17
-timeCreated: 1521579056
+guid: feb9562acc3602d44b0aee47eb9d1773
+timeCreated: 1523945219
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Golf Sprite Sheet_0
-    21300002: Golf Sprite Sheet_1
-    21300004: Golf Sprite Sheet_2
-    21300006: Golf Sprite Sheet_3
-    21300008: Golf Sprite Sheet_4
-    21300010: Golf Sprite Sheet_5
-    21300012: Golf Sprite Sheet_6
-    21300014: Golf Sprite Sheet_7
-    21300016: Golf Sprite Sheet_8
-    21300018: Golf Sprite Sheet_9
-    21300020: Golf Sprite Sheet_10
-    21300022: Golf Sprite Sheet_11
-    21300024: Golf Sprite Sheet_12
-    21300026: Golf Sprite Sheet_13
-    21300028: Golf Sprite Sheet_14
-    21300030: Golf Sprite Sheet_15
+    21300000: Hide Butin Sheet_0
+    21300002: Hide Butin Sheet_1
+    21300004: Hide Butin Sheet_2
+    21300006: Hide Butin Sheet_10
+    21300008: Hide Butin Sheet_11
+    21300010: Hide Butin Sheet_12
+    21300012: Hide Butin Sheet_13
+    21300014: Hide Butin Sheet_14
+    21300016: Hide Butin Sheet_15
+    21300018: Hide Butin Sheet_16
+    21300020: Hide Butin Sheet_17
+    21300022: Hide Butin Sheet_18
+    21300024: Hide Butin Sheet_19
+    21300026: Hide Butin Sheet_20
+    21300028: Hide Butin Sheet_21
+    21300030: Hide Butin Sheet_22
+    21300032: Hide Butin Sheet_23
+    21300034: Hide Butin Sheet_24
+    21300036: Hide Butin Sheet_25
+    21300038: Hide Butin Sheet_26
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -116,41 +120,41 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Golf Sprite Sheet_0
+      name: Hide Butin Sheet_0
       rect:
         serializedVersion: 2
-        x: 62
-        y: 1297
-        width: 1081
-        height: 1005
+        x: 45
+        y: 1482
+        width: 2032
+        height: 1166
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Golf Sprite Sheet_1
+      name: Hide Butin Sheet_1
       rect:
         serializedVersion: 2
-        x: 2096
-        y: 2298
-        width: 25
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2200
+        y: 1936
+        width: 800
+        height: 712
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Golf Sprite Sheet_2
+      name: Hide Butin Sheet_2
       rect:
         serializedVersion: 2
-        x: 2976
-        y: 1565
-        width: 471
-        height: 761
+        x: 3211
+        y: 1993
+        width: 1757
+        height: 602
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,41 +162,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Golf Sprite Sheet_3
+      name: Hide Butin Sheet_10
       rect:
         serializedVersion: 2
-        x: 1170
-        y: 1297
-        width: 1076
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Golf Sprite Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 2356
-        y: 1990
-        width: 421
-        height: 293
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Golf Sprite Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 3652
-        y: 1556
-        width: 664
-        height: 728
+        x: 5120
+        y: 2240
+        width: 150
+        height: 249
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,111 +176,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Golf Sprite Sheet_6
+      name: Hide Butin Sheet_11
       rect:
         serializedVersion: 2
-        x: 2565
-        y: 1918
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Golf Sprite Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 2372
-        y: 1626
-        width: 429
-        height: 281
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Golf Sprite Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 143
-        width: 1951
-        height: 1104
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Golf Sprite Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 2444
-        y: 1213
-        width: 56
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Golf Sprite Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 2888
-        y: 1196
-        width: 70
-        height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Golf Sprite Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 3101
-        y: 791
-        width: 303
-        height: 661
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Golf Sprite Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 3591
-        y: 687
-        width: 879
-        height: 801
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Golf Sprite Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 2171
-        y: 874
-        width: 252
-        height: 204
+        x: 5332
+        y: 2064
+        width: 297
+        height: 501
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,29 +190,211 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Golf Sprite Sheet_14
+      name: Hide Butin Sheet_12
       rect:
         serializedVersion: 2
-        x: 3447
-        y: 839
-        width: 6
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4207
+        y: 1776
+        width: 237
+        height: 154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Golf Sprite Sheet_15
+      name: Hide Butin Sheet_13
       rect:
         serializedVersion: 2
-        x: 2079
-        y: 240
-        width: 1350
-        height: 358
+        x: 2283
+        y: 1482
+        width: 533
+        height: 234
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 1267
+        width: 542
+        height: 443
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 3889
+        y: 1342
+        width: 267
+        height: 226
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 4436
+        y: 1372
+        width: 308
+        height: 161
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 4916
+        y: 1464
+        width: 364
+        height: 189
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 5578
+        y: 1396
+        width: 179
+        height: 144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 582
+        width: 616
+        height: 754
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 958
+        width: 295
+        height: 426
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 811
+        width: 744
+        height: 525
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 4191
+        y: 1310
+        width: 9
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 920
+        width: 218
+        height: 166
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 3471
+        y: 847
+        width: 149
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 4128
+        y: 90
+        width: 1688
+        height: 1092
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hide Butin Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 519
+        width: 449
+        height: 233
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
