@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class GameMoney : MonoBehaviour
 {
 
-    public GameObject Money1, Money2, Money3, Money4, Pile, Curtain, ScoreKeeper;
+    public GameObject Money2, Money3, Money4, Pile, Pile22, Pile33, Curtain, ScoreKeeper;
     public SpriteRenderer Pilesr;
-    public Sprite Pile0, Pile1, Pile2, Pile3, Pile4;
+    public Sprite Pile1, Pile2, Pile3, Pile4;
     public int Progress, Win, M1, M2, M3, M4;
     public float T, y1, y2, y3, y4;
     public Text ScoreText, LivesText, RuleText, TimeText;
@@ -23,7 +23,6 @@ public class GameMoney : MonoBehaviour
         Progress = 0;
         Win = 0;
         Pilesr = Pile.GetComponent<SpriteRenderer>();
-        M1 = Money1.GetComponent<ClickDragItem>().Drag;
         M2 = Money2.GetComponent<ClickDragItem>().Drag;
         M3 = Money3.GetComponent<ClickDragItem>().Drag;
         M4 = Money4.GetComponent<ClickDragItem>().Drag;
@@ -34,25 +33,7 @@ public class GameMoney : MonoBehaviour
 	
 	void Update ()
     {
-        if (M1 == 2)
-        {
-            y1 = Money1.transform.position.y;
-            if (y1 >= 0)
-            {
-                Progress=4;
-                M1++;
-                Money1.GetComponent<ClickDragItem>().enabled = false;
-                Money1.GetComponent<SpriteRenderer>().enabled = false;
-            }
-            else
-            {
-         //       Money1.transform.position = Money1.GetComponent<ClickDragItem>().StartLoc;
-                Money1.GetComponent<ClickDragItem>().Drag = 0;
-            }
-        }
-        else if (M1 != 3) 
-            M1 = Money1.GetComponent<ClickDragItem>().Drag;
-
+        
         if (M2 == 2)
         {
             y2 = Money2.transform.position.y;
@@ -112,22 +93,15 @@ public class GameMoney : MonoBehaviour
 
         switch (Progress)
         {
-            case (0):
-                Pilesr.sprite = Pile0;
-                break;
             case (1):
                 Pilesr.sprite = Pile1;
                 break;
             case (2):
-                Pilesr.sprite = Pile2;
+                Pile22.GetComponent<SpriteRenderer>().sprite = Pile2; 
                 break;
             case (3):
-                Pilesr.sprite = Pile3;
+                Pile33.GetComponent<SpriteRenderer>().sprite = Pile3;
                 Win = 1;
-                break;
-            case (4):
-                Pilesr.sprite = Pile4;
-                Win = 0;
                 break;
             default:
                 break;
