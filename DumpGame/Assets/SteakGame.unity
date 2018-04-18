@@ -195,6 +195,16 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114647035436625248, guid: 8bea83196b64640619f3bdc272a2eec8,
+        type: 2}
+      propertyPath: Steak
+      value: 
+      objectReference: {fileID: 1653510483}
+    - target: {fileID: 114647035436625248, guid: 8bea83196b64640619f3bdc272a2eec8,
+        type: 2}
+      propertyPath: Ketchup
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8bea83196b64640619f3bdc272a2eec8, type: 2}
   m_IsPrefabParent: 0
@@ -291,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d50d0f8e76fbf4fbbb4dfae85d6229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Count: {fileID: 0}
+  Count: {fileID: 1115742269}
   T: 0
   S: 0
   tt: 0
@@ -306,11 +316,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52d54527823f9bc40b36a6d5062770f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeText: {fileID: 0}
+  TimeText: {fileID: 1115742268}
   Curtain: {fileID: 284834807}
-  ScoreText: {fileID: 0}
-  LivesText: {fileID: 0}
-  RuleText: {fileID: 0}
+  ScoreText: {fileID: 1283700899}
+  LivesText: {fileID: 1250357738}
+  RuleText: {fileID: 1087782102}
   Score: 0
   Lives: 0
   Win: 0
@@ -339,10 +349,10 @@ MonoBehaviour:
   Length: 0
   Iteration: 0
   Curtain: {fileID: 284834807}
-  TimeText: {fileID: 0}
-  ScoreText: {fileID: 0}
-  LivesText: {fileID: 0}
-  RuleText: {fileID: 0}
+  TimeText: {fileID: 1115742268}
+  ScoreText: {fileID: 1283700898}
+  LivesText: {fileID: 1250357737}
+  RuleText: {fileID: 1087782101}
   CurtainSR: {fileID: 0}
 --- !u!114 &284834811
 MonoBehaviour:
@@ -1452,6 +1462,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1653510483 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1642859641349740, guid: 8bea83196b64640619f3bdc272a2eec8,
+    type: 2}
+  m_PrefabInternal: {fileID: 247113663}
 --- !u!114 &1971160866 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114647035436625248, guid: 8bea83196b64640619f3bdc272a2eec8,
