@@ -83,3 +83,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GrabCatGame.unity
     guid: ee1242bbb9529462cb9d28bcef2a6679
+  - enabled: 1
+    path: Assets/SteakGame.unity
+    guid: 0c155da1f2b0d40eab9fe2220f04cf2e
