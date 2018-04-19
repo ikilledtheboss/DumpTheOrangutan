@@ -8,6 +8,7 @@ TagManager:
   - WinSpace
   - BadSpace
   - collide
+  - SteakKetchup
   layers:
   - Default
   - TransparentFX

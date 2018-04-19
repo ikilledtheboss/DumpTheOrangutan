@@ -90,11 +90,10 @@ public class PresentResults : MonoBehaviour
                 NextGame = "WallGame";
                 RuleText.text = "BUILD THE WALL: TAP to place missing bricks";
             }
-
             else if (rvalue2 == 4)
             {
-                NextGame = "MoneyGame";
-                RuleText.text = "PORN STAR HUSH MONEY: CLICK and DRAG only 130,000 dollars";
+                NextGame = "GrabCatGame";
+                RuleText.text = "GRAB THE PUSSY: TAP to grab the pussy";
             }
 
             else if (rvalue2 == 5)
@@ -122,15 +121,26 @@ public class PresentResults : MonoBehaviour
             }
             else if (rvalue2 == 9)
             {
-                NextGame = "ParisGame";
-                RuleText.text = "Drag the Pen! Sign the papers!!!! ";
+                NextGame = "EarthGame";
+                RuleText.text = "CLICK THE USA to exit the Paris agreement";
             }
             else if (rvalue2 == 10)
             {
                 NextGame = "PipeGame";
                 RuleText.text = "Drag the pipes to the pipeline";
             }
+            else if (rvalue2 == 11)
+            {
+                NextGame = "MoneyGame";
+                RuleText.text = "PORN STAR HUSH MONEY: CLICK and DRAG only 130,000 dollars";
+            }
+            else if (rvalue2 == 12)
+            {
+                NextGame = "ButinGame";
+                RuleText.text = "PROTECT BUTIN: CLICK to hide Butin";
+            }
         }
+
 
         ScoreText.text = Score.ToString() + " POINTS";
         LivesText.text = Lives.ToString() + " LIVES";
@@ -161,35 +171,35 @@ public class PresentResults : MonoBehaviour
 
         rvalue1 = Random.Range(0, 4);
         if (orderset == 1)
-            rvalue2 = Random.Range(0, 4);
+            rvalue2 = Random.Range(0, 5);
         else if (orderset == 2)
         {
             if (rvalue1 == 0)
-                rvalue2 = Random.Range(4, 11);
+                rvalue2 = Random.Range(5, 13);
             else
-                rvalue2 = Random.Range(0, 4);
+                rvalue2 = Random.Range(0, 5);
         }
         else if (orderset == 3)
         {
             if (rvalue1 <= 1)
-                rvalue2 = Random.Range(4, 11);
+                rvalue2 = Random.Range(5, 13);
             else
-                rvalue2 = Random.Range(0, 4);
+                rvalue2 = Random.Range(0, 5);
         }
         else if (orderset == 4)
         {
             if (rvalue1 <= 2)
-                rvalue2 = Random.Range(4, 11);
+                rvalue2 = Random.Range(5, 13);
             else
-                rvalue2 = Random.Range(0, 4);
+                rvalue2 = Random.Range(0, 5);
         }
 
         while(rvalue2 == rep1 || rvalue2 == rep2)
         {
             if (rvalue2 == 0)
-                rvalue2 = 3;
+                rvalue2 = 4;
             else if (rvalue2 == 4)
-                rvalue2 = 10;
+                rvalue2 = 12;
             else
                 rvalue2--;
         }

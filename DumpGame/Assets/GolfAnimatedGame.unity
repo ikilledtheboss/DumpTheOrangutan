@@ -401,7 +401,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 865511316}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -467,6 +467,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 865511322}
+        m_MethodName: TurnOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &865511320
@@ -514,6 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Win: 0
+  progress: 0
   Self: {fileID: 865511316}
   Curtain: {fileID: 2071325097}
   ScoreKeeper: {fileID: 2071325097}
@@ -1033,7 +1045,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.0299997, y: 6.6099997}
+    oldSize: {x: 3.03, y: 6.61}
     newSize: {x: 3.0299997, y: 6.6099997}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1294,8 +1306,8 @@ MonoBehaviour:
   orderrep: 0
   orderset: 0
   T: 0
+  Finish: 0
   NextGame: 
-  tt: 0
 --- !u!114 &2071325099
 MonoBehaviour:
   m_ObjectHideFlags: 0

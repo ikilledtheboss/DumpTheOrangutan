@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GolfGameplay : MonoBehaviour
 {
-    public int Win;
+    public int Win, progress;
     public GameObject Self, Curtain,  ScoreKeeper;
     public float T;
     public Text ScoreText, LivesText, RuleText, TimeText;
@@ -21,11 +21,22 @@ public class GolfGameplay : MonoBehaviour
         T = PlayerPrefs.GetFloat("PTime");
         Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
+        progress = 0;
     }
     
-    
+    public void TurnOff()
+    {
+        Self.GetComponent<Button>().enabled = false;
+    }
+
     void Update()
     {
+        if (Curtain.GetComponent<UpFlag>().enabled == false && progress == 0)
+        {
+            Self.GetComponent<Button>().enabled = true;
+            progress++;
+        }
+
         if (T< 0)
         {
             PlayerPrefs.SetInt("Result", Win);

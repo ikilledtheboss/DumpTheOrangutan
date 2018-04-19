@@ -10,6 +10,7 @@ public class TimeLineController : MonoBehaviour
     public List<PlayableDirector> stopableDirectors;
     public List<TimelineAsset> timelines;
     public  bool a = false;
+
     public void Play()
     {
         foreach (PlayableDirector playableDirector in playableDirectors)

@@ -624,7 +624,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 7.5}
+    oldSize: {x: 15, y: 15}
     newSize: {x: 5, y: 3.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -667,7 +667,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9958eb89694da1042b36b1dccda73334, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7fb879c5df7d39d4d8f2bdf5513f0a79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -684,8 +684,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1368362026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.38, y: -1.31, z: -2.78}
-  m_LocalScale: {x: 0.43396655, y: 0.43396658, z: 0.43396655}
+  m_LocalPosition: {x: -0.34, y: -0.77, z: -2.78}
+  m_LocalScale: {x: 1.3347727, y: 1.0163846, z: 0.43396655}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -705,12 +705,16 @@ MonoBehaviour:
   Curtain: {fileID: 2071325097}
   ScoreKeeper: {fileID: 0}
   Drinksr: {fileID: 0}
-  D2: {fileID: 21300000, guid: 2837b76e033119c4d845b912f8b4f527, type: 3}
-  D3: {fileID: 21300000, guid: 81db878f23d9d264397eeaddd3124ae3, type: 3}
-  D4: {fileID: 21300000, guid: a455ebaff270913489a5374df210170f, type: 3}
+  D0: {fileID: 21300000, guid: 3ffeb01b7922ffc4195f65139298c10f, type: 3}
+  D2: {fileID: 21300000, guid: 6a386e26b3526f949934563f5c62a99d, type: 3}
+  D3: {fileID: 21300000, guid: 42be41f44bf90f24c9d6e40a5fb39068, type: 3}
+  D4: {fileID: 21300000, guid: c4f9f7b440cf07b4985a7beb597f9525, type: 3}
+  D5: {fileID: 21300000, guid: 00458ced20f25b14e9f3bedaaf86f4f3, type: 3}
+  D6: {fileID: 21300000, guid: 00458ced20f25b14e9f3bedaaf86f4f3, type: 3}
+  D7: {fileID: 21300000, guid: 7fb879c5df7d39d4d8f2bdf5513f0a79, type: 3}
+  D8: {fileID: 21300000, guid: 7fb879c5df7d39d4d8f2bdf5513f0a79, type: 3}
   Progress: 0
   Win: 0
-  Dragged: 0
   T: 0
   Chug: 0
   ScoreText: {fileID: 1987644865}
@@ -718,6 +722,7 @@ MonoBehaviour:
   RuleText: {fileID: 680309618}
   TimeText: {fileID: 312369867}
   tt: 0
+  Track: 0
   InHold: 0
 --- !u!1 &1606700241
 GameObject:
@@ -947,7 +952,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 633250d072b15b7419250fbfb7437540, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7fb879c5df7d39d4d8f2bdf5513f0a79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -964,8 +969,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1784538596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.88, y: -1.89, z: -1.19}
-  m_LocalScale: {x: 0.6901218, y: 0.6901219, z: 0.6901219}
+  m_LocalPosition: {x: 0.05, y: -0.76, z: -1.19}
+  m_LocalScale: {x: 1.2242289, y: 1.0114013, z: 0.6901219}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1177,7 +1182,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2071325097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.26, y: -0.01, z: -2.97}
+  m_LocalPosition: {x: 0.3, y: -0.01, z: -2.97}
   m_LocalScale: {x: 6.008619, y: 6.2427187, z: 6.2427187}
   m_Children: []
   m_Father: {fileID: 0}

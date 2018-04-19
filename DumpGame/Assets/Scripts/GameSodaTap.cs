@@ -8,15 +8,16 @@ public class GameSodaTap : MonoBehaviour {
 
     public GameObject Drink, Curtain, ScoreKeeper;
     public SpriteRenderer Drinksr;
-    public Sprite D2, D3, D4;
-    public int Progress, Win, Dragged;
+    public Sprite D0, D2, D3, D4, D5, D6, D7, D8;
+    public int Progress, Win;
     public float T, Chug;
     public Text ScoreText, LivesText, RuleText, TimeText;
-    public double tt;
+    public double tt, Track;
     public bool InHold;
 
     void Start()
     {
+     //   Track = 0;
         ScoreText.enabled = false;
         LivesText.enabled = false;
         RuleText.enabled = false;
@@ -30,7 +31,6 @@ public class GameSodaTap : MonoBehaviour {
         else if (T < 4)
             Chug = 0.50f;
 
-        Dragged = Drink.GetComponent<ClickDragItem>().Drag;
         Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
 
@@ -39,18 +39,25 @@ public class GameSodaTap : MonoBehaviour {
     
     void Update ()
     {
+
         if (Progress != 0)
         {
-            if (Chug >= 1.8f)
+            if (Chug >= 2.0f)
             {
-                Drinksr.sprite = D4;
+                Drinksr.sprite = D5;
                 Win = 1;
                 Progress = 0;
             }
+            else if (Chug >= 1.6f)
+                Drinksr.sprite = D4;
             else if (Chug >= 1.2f)
                 Drinksr.sprite = D3;
-            else if (Chug >= 0.6f)
+            else if (Chug >= 0.8f)
                 Drinksr.sprite = D2;
+            else if (Chug >= 0.4f)
+                Drinksr.sprite = D0;
+            else if (Chug > 0.0f)
+                Drinksr.sprite = D8;
         }
         if (T < 0)
         {
@@ -64,17 +71,30 @@ public class GameSodaTap : MonoBehaviour {
         {
             T = T - Time.deltaTime;
             if (InHold == true)
+            {
                 Chug = Chug + Time.deltaTime;
+                //if (Track >= 0)
+                //{
+                //    Track = Track - Time.deltaTime;
+                //    Drinksr.sprite = D8;
+                //}
+            }
+            else if (Progress != 0 && Chug > 0) 
+            {
+                Drinksr.sprite = D7;
+            }
         }
     }
 
     void OnMouseDown()
     {
         InHold = true;
+       // Track = Chug + .2;
     }
 
     void OnMouseUp()
     {
         InHold = false;
+    //    Track = 0;
     }
 }
