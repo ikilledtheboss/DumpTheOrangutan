@@ -29,8 +29,9 @@ public class GameSteak : MonoBehaviour
 
     void Update()
     {
-        if(collideCounter >= 10)
+        if(collideCounter == 10)
         {
+            collideCounter++;
             Blurp.GetComponent<SpriteRenderer>().enabled = true;
             Player();
             Win = 1;
