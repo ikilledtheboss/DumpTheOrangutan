@@ -9,7 +9,7 @@ public class PresentResults : MonoBehaviour
 {
     public GameObject TimeText, Curtain;
     public Text ScoreText, LivesText, RuleText;
-    public int Score, Lives, Win, rvalue1, rvalue2, rep1, rep2, rep3, rep4, orderrep, orderset;
+    public int Score, Lives, Win, rvalue1, rvalue2, rvalue3, rep1, rep2, rep3, rep4, orderrep, orderset;
     public float T;
     public bool Finish;
     public string NextGame;
@@ -98,8 +98,8 @@ public class PresentResults : MonoBehaviour
 
             else if (rvalue2 == 5)
             {
-                NextGame = "AirportGame";
-                RuleText.text = "KEEP THOSE MUSLIMS OUT!: TAP on the muslim";
+                NextGame = "SteakGame";
+                RuleText.text = "SHAKE THE KETCHUP! CLICk and DRAG to prepare your meal";
             }
 
             else if (rvalue2 == 6)
@@ -139,6 +139,12 @@ public class PresentResults : MonoBehaviour
                 NextGame = "ButinGame";
                 RuleText.text = "PROTECT BUTIN: CLICK to hide Butin";
             }
+
+            else if (rvalue2 == 13)
+            {
+                NextGame = "AirportGame";
+                RuleText.text = "KEEP THOSE MUSLIMS OUT!: TAP on the muslim";
+            }
         }
 
 
@@ -165,41 +171,41 @@ public class PresentResults : MonoBehaviour
     {
         rep1 = PlayerPrefs.GetInt("Repeat1");
         rep2 = PlayerPrefs.GetInt("Repeat2");
-       // rep3 = PlayerPrefs.GetInt("Repeat3");
+        rep3 = PlayerPrefs.GetInt("Repeat3");
         orderrep = PlayerPrefs.GetInt("CurrentRepeat", 1);
         orderset = PlayerPrefs.GetInt("CurrentSets", 1);
 
         rvalue1 = Random.Range(0, 4);
         if (orderset == 1)
-            rvalue2 = Random.Range(0, 5);
+            rvalue2 = Random.Range(0, 6);
         else if (orderset == 2)
         {
             if (rvalue1 == 0)
-                rvalue2 = Random.Range(5, 13);
+                rvalue2 = Random.Range(6, 14);
             else
-                rvalue2 = Random.Range(0, 5);
+                rvalue2 = Random.Range(0, 6);
         }
         else if (orderset == 3)
         {
             if (rvalue1 <= 1)
-                rvalue2 = Random.Range(5, 13);
+                rvalue2 = Random.Range(6, 14);
             else
-                rvalue2 = Random.Range(0, 5);
+                rvalue2 = Random.Range(0, 6);
         }
         else if (orderset == 4)
         {
             if (rvalue1 <= 2)
-                rvalue2 = Random.Range(5, 13);
+                rvalue2 = Random.Range(6, 14);
             else
-                rvalue2 = Random.Range(0, 5);
+                rvalue2 = Random.Range(0, 6);
         }
 
-        while(rvalue2 == rep1 || rvalue2 == rep2)
+        while(rvalue2 == rep1 || rvalue2 == rep2 || rvalue3 == rep3)
         {
             if (rvalue2 == 0)
-                rvalue2 = 4;
-            else if (rvalue2 == 4)
-                rvalue2 = 12;
+                rvalue2 = 5;
+            else if (rvalue2 == 5)
+                rvalue2 = 13;
             else
                 rvalue2--;
         }
@@ -212,13 +218,13 @@ public class PresentResults : MonoBehaviour
         else if (orderrep == 2)
         {
             PlayerPrefs.SetInt("Repeat2", rvalue2);
+            PlayerPrefs.SetInt("CurrentRepeat", 3);
+        }
+        else if (orderrep == 3)
+        {
+            PlayerPrefs.SetInt("Repeat3", rvalue2);
             PlayerPrefs.SetInt("CurrentRepeat", 1);
         }
-        //else if (orderrep == 3)
-        //{
-        //    PlayerPrefs.SetInt("Repeat3", rvalue2);
-        //    PlayerPrefs.SetInt("CurrentRepeat", 1);
-        //}
 
         return rvalue2;
     }

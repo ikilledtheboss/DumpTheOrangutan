@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class GamePipe : MonoBehaviour {
 
 
-    public GameObject Pipe1, Pipe2, Pipe3, Line, Curtain, ScoreKeeper;
-    public int Win, P1, P2, P3;
-    public float T, x1, x2, x3;
+    public GameObject Pipe1, Pipe2, Pipe3, Pipe4, r1, r2, r3, r4, b1, b2, b3, b4, d1, d2, d3 ,d4, Dump1, Dump2, pipe, Line, Curtain, ScoreKeeper;
+    public int Win;
+    public Sprite s;
+    public bool P1, P2, P3, P4, pp1, pp2, pp3, pp4;
+    public float T, x1, x2, x3, reset;
     public Text ScoreText, LivesText, RuleText, TimeText;
     public double tt;
 
@@ -19,63 +21,102 @@ public class GamePipe : MonoBehaviour {
         LivesText.enabled = false;
         RuleText.enabled = false;
         Win = 0;
-        P1 = Pipe1.GetComponent<ClickDragItem>().Drag;
-        P2 = Pipe2.GetComponent<ClickDragItem>().Drag;
-        P3 = Pipe3.GetComponent<ClickDragItem>().Drag;
+        reset = -1;
+        P1 = Pipe1.GetComponent<ContactClick>().hold;
+        P2 = Pipe2.GetComponent<ContactClick>().hold;
+        P3 = Pipe3.GetComponent<ContactClick>().hold;
+        P4 = Pipe4.GetComponent<ContactClick>().hold;
+        pp1 = true;
+        pp2 = true;
+        pp3 = true;
+        pp4 = true;
         Pipe2.GetComponent<BoxCollider2D>().enabled = false;
         Pipe3.GetComponent<BoxCollider2D>().enabled = false;
-        T = PlayerPrefs.GetFloat("PTime");
+        Pipe4.GetComponent<BoxCollider2D>().enabled = false;
+        T = 4.5f;
+//CHANGE
         Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
     }
     // Update is called once per frame
     void Update()
     {
-        if (P1 == 2)
+        P1 = Pipe1.GetComponent<ContactClick>().hold;
+        P2 = Pipe2.GetComponent<ContactClick>().hold;
+        P3 = Pipe3.GetComponent<ContactClick>().hold;
+        P4 = Pipe4.GetComponent<ContactClick>().hold;
+        if (P1 == true && pp1 == true)
         {
-            x1 = Pipe1.transform.position.x;
-            if (x1 >= 0 && x1 <= 2)
-            {
-                P1++;
-                Pipe2.GetComponent<BoxCollider2D>().enabled = true;
-                Pipe1.GetComponent<ClickDragItem>().enabled = false;
-            }
-            else
-                Pipe1.GetComponent<ClickDragItem>().Drag = 0;
+            reset = 0.4f;
+            Dump1.GetComponent<SpriteRenderer>().enabled = false;
+            Dump2.GetComponent<SpriteRenderer>().enabled = true;
+            pipe.GetComponent<SpriteRenderer>().enabled = true;
+            Pipe1.GetComponent<SpriteRenderer>().enabled = false;
+            Pipe1.GetComponent<BoxCollider2D>().enabled = false;
+            Pipe2.GetComponent<BoxCollider2D>().enabled = true;
+            pp1 = false;
+            r1.GetComponent<SpriteRenderer>().enabled = true;
+            b1.SetActive(false);
+            b2.SetActive(true);
+            d1.GetComponent<SpriteRenderer>().enabled = true;
         }
-        else if (P1 != 3)
-            P1 = Pipe1.GetComponent<ClickDragItem>().Drag;
 
-        if (P2 == 2)
+        if (P2 == true && pp2 == true)
         {
-            x2 = Pipe2.transform.position.x;
-            if (x2 >= 0 && x2 <= 2)
-            {
-                P2++;
-                Pipe3.GetComponent<BoxCollider2D>().enabled = true;
-                Pipe2.GetComponent<ClickDragItem>().enabled = false;
-            }
-            else
-                Pipe2.GetComponent<ClickDragItem>().Drag = 0;
-        }
-        else if (P2 != 3)
-            P2 = Pipe1.GetComponent<ClickDragItem>().Drag;
+            reset = 0.4f;
+            Dump1.GetComponent<SpriteRenderer>().enabled = false;
+            Dump2.GetComponent<SpriteRenderer>().enabled = true;
+            pipe.GetComponent<SpriteRenderer>().enabled = true;
+            Pipe2.GetComponent<SpriteRenderer>().enabled = false;
+            Pipe2.GetComponent<BoxCollider2D>().enabled = false;
+            Pipe3.GetComponent<BoxCollider2D>().enabled = true;
+            r2.GetComponent<SpriteRenderer>().enabled = true;
+            pp2 = false;
+            b2.SetActive(false);
+            b3.SetActive(true);
+            d2.GetComponent<SpriteRenderer>().enabled = true;
 
-        if (P3 == 2)
+        }
+
+        if (P3 == true && pp3 == true)
         {
-            x3 = Pipe3.transform.position.x;
-            if (x3 >= 0 && x3 <= 2)
-            {
-                Win = 1;
-                P3++;
-                Pipe3.GetComponent<ClickDragItem>().enabled = false;
-            }
-            else
-                Pipe3.GetComponent<ClickDragItem>().Drag = 0;
+            reset = 0.4f;
+            Dump1.GetComponent<SpriteRenderer>().enabled = false;
+            Dump2.GetComponent<SpriteRenderer>().enabled = true;
+            pipe.GetComponent<SpriteRenderer>().enabled = true;
+            Pipe3.GetComponent<BoxCollider2D>().enabled = false;
+            Pipe3.GetComponent<SpriteRenderer>().enabled = false;
+            Pipe4.GetComponent<BoxCollider2D>().enabled = true;
+            r3.GetComponent<SpriteRenderer>().enabled = true;
+            pp3 = false;
+            b3.SetActive(false);
+            b4.SetActive(true);
+            d3.GetComponent<SpriteRenderer>().enabled = true;
         }
-        else if (P3 != 3)
-            P3 = Pipe3.GetComponent<ClickDragItem>().Drag;
 
+        if (P4 == true && pp4 == true)
+        {
+            reset = 0.4f;
+            Dump1.GetComponent<SpriteRenderer>().enabled = false;
+            Dump2.GetComponent<SpriteRenderer>().enabled = true;
+            pipe.GetComponent<SpriteRenderer>().enabled = true;
+            Pipe4.GetComponent<SpriteRenderer>().enabled = false;
+            Pipe4.GetComponent<BoxCollider2D>().enabled = false;
+            Win = 1;
+            pp4 = false;
+            r4.GetComponent<SpriteRenderer>().enabled = true;
+            b4.SetActive(false);
+            d4.GetComponent<SpriteRenderer>().enabled = true;
+        }
+
+        if (reset < 0)
+        {
+            Dump2.GetComponent<SpriteRenderer>().enabled = false;
+            pipe.GetComponent<SpriteRenderer>().enabled = false;
+            Dump1.GetComponent<SpriteRenderer>().enabled = true;
+        }
+        else
+            reset = reset - Time.deltaTime;
 
         if (T < 0)
         {

@@ -205,9 +205,33 @@ Prefab:
       propertyPath: Ketchup
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 320596160191766688, guid: 8bea83196b64640619f3bdc272a2eec8,
+        type: 2}
+      propertyPath: m_InitialState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570046550020688, guid: 8bea83196b64640619f3bdc272a2eec8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -310.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570046550020688, guid: 8bea83196b64640619f3bdc272a2eec8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -188.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 212251060822396782, guid: 8bea83196b64640619f3bdc272a2eec8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114647035436625248, guid: 8bea83196b64640619f3bdc272a2eec8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8bea83196b64640619f3bdc272a2eec8, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &251521036 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1328487671795844, guid: 8bea83196b64640619f3bdc272a2eec8,
+    type: 2}
+  m_PrefabInternal: {fileID: 247113663}
 --- !u!1 &268083860
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +350,7 @@ MonoBehaviour:
   Win: 0
   rvalue1: 0
   rvalue2: 0
+  rvalue3: 0
   rep1: 0
   rep2: 0
   rep3: 0
@@ -589,7 +614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a35e198e771145b5a7c4bbb9c1c4b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameSteakScript: {fileID: 1971160866}
+  GameSteakScript: {fileID: 0}
 --- !u!50 &395769653
 Rigidbody2D:
   serializedVersion: 4
@@ -677,7 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a35e198e771145b5a7c4bbb9c1c4b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameSteakScript: {fileID: 1971160866}
+  GameSteakScript: {fileID: 0}
 --- !u!50 &445624977
 Rigidbody2D:
   serializedVersion: 4
@@ -1042,7 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a35e198e771145b5a7c4bbb9c1c4b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameSteakScript: {fileID: 1971160866}
+  GameSteakScript: {fileID: 0}
 --- !u!50 &1229317324
 Rigidbody2D:
   serializedVersion: 4
@@ -1211,6 +1236,35 @@ RectTransform:
   m_AnchoredPosition: {x: 247.8, y: -21.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1314109523 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1979196127160930, guid: 8bea83196b64640619f3bdc272a2eec8,
+    type: 2}
+  m_PrefabInternal: {fileID: 247113663}
+--- !u!114 &1314109530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1314109523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf92272f8820c4a4db0d5cf9608dc15c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 1314109523}
+  Blurp: {fileID: 251521036}
+  Curtain: {fileID: 284834807}
+  Win: 0
+  tttt: 0
+  collideCounter: 0
+  T: 0
+  ScoreText: {fileID: 1283700899}
+  LivesText: {fileID: 1250357738}
+  RuleText: {fileID: 1087782102}
+  TimeText: {fileID: 1115742269}
+  tt: 0
+  Ketchup: {fileID: 1653510485}
 --- !u!1 &1318654792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +1495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a35e198e771145b5a7c4bbb9c1c4b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameSteakScript: {fileID: 1971160866}
+  GameSteakScript: {fileID: 0}
 --- !u!50 &1324135288
 Rigidbody2D:
   serializedVersion: 4
@@ -1467,9 +1521,8 @@ GameObject:
   m_PrefabParentObject: {fileID: 1642859641349740, guid: 8bea83196b64640619f3bdc272a2eec8,
     type: 2}
   m_PrefabInternal: {fileID: 247113663}
---- !u!114 &1971160866 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114647035436625248, guid: 8bea83196b64640619f3bdc272a2eec8,
+--- !u!320 &1653510485 stripped
+PlayableDirector:
+  m_PrefabParentObject: {fileID: 320596160191766688, guid: 8bea83196b64640619f3bdc272a2eec8,
     type: 2}
   m_PrefabInternal: {fileID: 247113663}
-  m_Script: {fileID: 11500000, guid: bf92272f8820c4a4db0d5cf9608dc15c, type: 3}

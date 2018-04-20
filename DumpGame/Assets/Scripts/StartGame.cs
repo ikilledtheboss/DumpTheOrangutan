@@ -9,7 +9,7 @@ public class StartGame : MonoBehaviour
     public string StageScene;
     public GameObject StartButton, Curtain, t1, t2, t3, t4, TimeText;
     public bool Classic;
-    public int Lives, Score, PResult;
+    public int Lives, Score, PResult, apple;
     public float Time;
     public Text ScoreText, LivesText, RuleText;
 
@@ -29,6 +29,12 @@ public class StartGame : MonoBehaviour
             ClassicStart();
     }
 
+    public void QuitGame()
+    {
+        apple = 1;
+        Application.Quit();
+    }
+
     void ClassicStart()
     {
         PlayerPrefs.SetInt ("PLives", Lives);
@@ -38,7 +44,7 @@ public class StartGame : MonoBehaviour
 
         PlayerPrefs.SetInt("Repeat1", -1);
         PlayerPrefs.SetInt("Repeat2", -1);
-      //  PlayerPrefs.SetInt("Repeat3", -1);
+        PlayerPrefs.SetInt("Repeat3", -1);
 
         PlayerPrefs.SetInt("CurrentRepeat", 1);
         PlayerPrefs.SetInt("CurrentSets", 1);
