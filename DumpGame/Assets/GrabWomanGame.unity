@@ -505,6 +505,16 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 320732581929281922, guid: cd00b04f04c0bbe4c91499540a61b6a6,
+        type: 2}
+      propertyPath: m_WrapMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 320942554114100656, guid: cd00b04f04c0bbe4c91499540a61b6a6,
+        type: 2}
+      propertyPath: m_WrapMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd00b04f04c0bbe4c91499540a61b6a6, type: 2}
   m_IsPrefabParent: 0
@@ -1106,6 +1116,7 @@ MonoBehaviour:
   Win: 0
   rvalue1: 0
   rvalue2: 0
+  rvalue3: 0
   rep1: 0
   rep2: 0
   rep3: 0
