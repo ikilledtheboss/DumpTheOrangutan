@@ -165,14 +165,14 @@ public class PresentResults : MonoBehaviour
     void end()
     {
         SceneManager.LoadScene(NextGame);
-      //  SceneManager.LoadScene("GolfAnimatedGame");
+       // SceneManager.LoadScene("GolfAnimatedGame");
     }
 
     int RandomValue()
     {
         rep1 = PlayerPrefs.GetInt("Repeat1");
         rep2 = PlayerPrefs.GetInt("Repeat2");
-     //   rep3 = PlayerPrefs.GetInt("Repeat3");
+        rep3 = PlayerPrefs.GetInt("Repeat3");
         orderrep = PlayerPrefs.GetInt("CurrentRepeat", 1);
         orderset = PlayerPrefs.GetInt("CurrentSets", 1);
 
@@ -200,8 +200,8 @@ public class PresentResults : MonoBehaviour
             else
                 rvalue2 = Random.Range(0, 6);
         }
-
-        while(rvalue2 == rep1 || rvalue2 == rep2)
+        //rvalue2 = 0;
+        while(rvalue2 == rep1 || rvalue2 == rep2 || rvalue2 == rep3)
         {
             if (rvalue2 == 0)
                 rvalue2 = 5;
@@ -221,12 +221,12 @@ public class PresentResults : MonoBehaviour
             PlayerPrefs.SetInt("Repeat2", rvalue2);
             PlayerPrefs.SetInt("CurrentRepeat", 1);
         }
-        //else if (orderrep == 3)
-        //{
-        //    PlayerPrefs.SetInt("Repeat3", rvalue2);
-        //    PlayerPrefs.SetInt("CurrentRepeat", 1);
-        //}
-
+        else if (orderrep == 3)
+        {
+            PlayerPrefs.SetInt("Repeat3", rvalue2);
+            PlayerPrefs.SetInt("CurrentRepeat", 1);
+        }
+       // rvalue2 = 0;
         return rvalue2;
     }
 }
