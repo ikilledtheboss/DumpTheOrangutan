@@ -18,7 +18,7 @@ public class GameVote : MonoBehaviour
 
     public void AnyoneWins()
     {
-        NextGame = "LoseScreen";
+        NextGame = "WinScreen";
         SceneManager.LoadScene(NextGame);
     }
 

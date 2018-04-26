@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class StartGame : MonoBehaviour
 {
     public string StageScene;
-    public GameObject StartButton, TimeText;
-    public bool Classic;
+    public GameObject StartButton, QuitButton, InfoButton, CreditsButton, TimeText;
+    public bool Classic, Info, Credits, Quit;
     public int Lives, Score, PResult;
     public float Time;
 
@@ -22,12 +22,32 @@ public class StartGame : MonoBehaviour
         Classic = StartButton.GetComponent<ClickItem>().Clicked;
         if(Classic == true)
             ClassicStart();
-
+        Quit = QuitButton.GetComponent<ClickItem>().Clicked;
+        if (Quit == true)
+            QuitGame();
+        Info = InfoButton.GetComponent<ClickItem>().Clicked;
+        if (Info == true)
+            InfoStart();
+        Credits = CreditsButton.GetComponent<ClickItem>().Clicked;
+        if (Credits == true)
+            CreditsStart();
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    void InfoStart()
+    {
+         StageScene = "SourcesList";
+         SceneManager.LoadScene(StageScene);
+    }
+
+    void CreditsStart()
+    {         
+         StageScene = "CreditScene";
+         SceneManager.LoadScene(StageScene);
     }
 
     void ClassicStart()
