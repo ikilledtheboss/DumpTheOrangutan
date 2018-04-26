@@ -9,6 +9,7 @@ TagManager:
   - BadSpace
   - collide
   - SteakKetchup
+  - Comb
   layers:
   - Default
   - TransparentFX

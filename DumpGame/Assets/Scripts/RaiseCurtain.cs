@@ -22,7 +22,9 @@ public class RaiseCurtain : MonoBehaviour
         Score = PlayerPrefs.GetInt("PScore");
         Game = PlayerPrefs.GetInt("CurrentGame");
 
-        if (Score >= 10)
+        if (Score >= 20)
+            S1.GetComponent<SpriteRenderer>().sprite = n2;
+        else if (Score >= 10)
             S1.GetComponent<SpriteRenderer>().sprite = n1;
         else
             S1.GetComponent<SpriteRenderer>().sprite = n0;
@@ -93,7 +95,7 @@ public class RaiseCurtain : MonoBehaviour
             Finish = false;
             StageSetUp.SetActive(false);
 
-            if (Score >= 15)
+            if (Score >= 20)
             {
                 Self.GetComponent<GameVote>().enabled = true;
             }
@@ -131,7 +133,7 @@ public class RaiseCurtain : MonoBehaviour
 
             else if (Game == 7)
             {
-                Self.GetComponent<GameKeys>().enabled = true;
+                Self.GetComponent<GameComb>().enabled = true;
             }
 
             else if (Game == 8)
@@ -157,6 +159,10 @@ public class RaiseCurtain : MonoBehaviour
             else if (Game == 13)
             {
                 Self.GetComponent<GameAirport>().enabled = true;
+            }
+            else if (Game == 14)
+            {
+                Self.GetComponent<GameKeys>().enabled = true;
             }
 
             Liveshow.GetComponent<SpriteRenderer>().enabled = false;

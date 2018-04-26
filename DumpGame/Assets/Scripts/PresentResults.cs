@@ -47,7 +47,7 @@ public class PresentResults : MonoBehaviour
                 Fail.Play();
         }
 
-        if (Score == 15)
+        if (Score == 20)
             Finish = true;
         if (Lives == 0)
         {
@@ -55,17 +55,17 @@ public class PresentResults : MonoBehaviour
             SceneManager.LoadScene(NextGame);
         }
 
-        if (Score >= 11)
+        if (Score >= 15)
         {
             PlayerPrefs.SetInt("CurrentSets", 4);
             PlayerPrefs.SetFloat("PTime", 3.5f);
         }
-        else if (Score >= 7)
+        else if (Score >= 10)
         { 
             PlayerPrefs.SetInt("CurrentSets", 3);
             PlayerPrefs.SetFloat("PTime", 4.5f);
         }
-        else if (Score >= 3)
+        else if (Score >= 5)
         {
             PlayerPrefs.SetInt("CurrentSets", 2);
             PlayerPrefs.SetFloat("PTime", 5.5f);
@@ -95,7 +95,7 @@ public class PresentResults : MonoBehaviour
         {
             rvalue2 = RandomValue();
             PlayerPrefs.SetInt("CurrentGame", rvalue2);
-            if (rvalue2 <= 6)
+            if (rvalue2 <= 7)
             {
                 Up.GetComponent<SpriteRenderer>().enabled = true;
                 Down.GetComponent<SpriteRenderer>().enabled = false;
@@ -149,7 +149,7 @@ public class PresentResults : MonoBehaviour
 
             else if (rvalue2 == 7)
             {
-                NextGame = "KeyGame";
+                NextGame = "CombGame";
               //  RuleText.text = "READY THE NUKES: TAP the keys in time";
             }
 
@@ -183,6 +183,12 @@ public class PresentResults : MonoBehaviour
             {
                 NextGame = "AirportGame";
              //   RuleText.text = "KEEP THOSE MUSLIMS OUT!: TAP on the muslim";
+            }
+
+            else if (rvalue2 == 14)
+            {
+                NextGame = "KeyGame";
+                //  RuleText.text = "READY THE NUKES: TAP the keys in time";
             }
         }
     }
@@ -220,35 +226,35 @@ public class PresentResults : MonoBehaviour
 
         rvalue1 = Random.Range(0, 4);
         if (orderset == 1)
-            rvalue2 = Random.Range(0, 7);
+            rvalue2 = Random.Range(0, 8);
         else if (orderset == 2)
         {
             if (rvalue1 == 0)
-                rvalue2 = Random.Range(7, 14);
+                rvalue2 = Random.Range(8, 15);
             else
-                rvalue2 = Random.Range(0, 7);
+                rvalue2 = Random.Range(0, 8);
         }
         else if (orderset == 3)
         {
             if (rvalue1 <= 1)
-                rvalue2 = Random.Range(7, 14);
+                rvalue2 = Random.Range(8, 15);
             else
-                rvalue2 = Random.Range(0, 7);
+                rvalue2 = Random.Range(0, 8);
         }
         else if (orderset == 4)
         {
             if (rvalue1 <= 2)
-                rvalue2 = Random.Range(7, 14);
+                rvalue2 = Random.Range(8, 15);
             else
-                rvalue2 = Random.Range(0, 7);
+                rvalue2 = Random.Range(0, 8);
         }
         //rvalue2 = 0;
         while(rvalue2 == rep1 || rvalue2 == rep2 || rvalue2 == rep3)
         {
             if (rvalue2 == 0)
-                rvalue2 = 6;
-            else if (rvalue2 == 6)
-                rvalue2 = 13;
+                rvalue2 = 7;
+            else if (rvalue2 == 7)
+                rvalue2 = 14;
             else
                 rvalue2--;
         }
