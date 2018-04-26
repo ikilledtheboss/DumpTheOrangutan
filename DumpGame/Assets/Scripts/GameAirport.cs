@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameAirport : MonoBehaviour
 {
-    public GameObject Self, Curtain;
+    public GameObject Self;
     public int Win;
     public float T;
     public Text ScoreText, LivesText, RuleText, TimeText;
@@ -19,7 +19,6 @@ public class GameAirport : MonoBehaviour
         RuleText.enabled = false;
         Win = 0;
         T = PlayerPrefs.GetFloat("PTime");
-        Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
     }
 
@@ -33,8 +32,7 @@ public class GameAirport : MonoBehaviour
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            Curtain.GetComponent<DownFlag>().enabled = true;
-            Curtain.GetComponent<PresentResults>().enabled = true;
+            Self.GetComponent<PresentResults>().enabled = true;
             Self.GetComponent<GameAirport>().enabled = false;
         }
         else

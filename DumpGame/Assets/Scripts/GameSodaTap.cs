@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class GameSodaTap : MonoBehaviour {
 
-    public GameObject Drink, Curtain, ScoreKeeper;
-    public SpriteRenderer Drinksr;
+    public GameObject Self;
     public Sprite D0, D2, D3, D4, D5, D6, D7, D8;
     public int Progress, Win;
     public float T, Chug;
@@ -25,13 +24,11 @@ public class GameSodaTap : MonoBehaviour {
         Win = 0;
         T = PlayerPrefs.GetFloat("PTime");
         Chug = 0;
-        Drinksr = Drink.GetComponent<SpriteRenderer>();
         if (T < 3)
             Chug = 1.00f;
         else if (T < 4)
             Chug = 0.50f;
-
-        Curtain.GetComponent<UpFlag>().enabled = true;
+        
         tt = T;
 
         InHold = false;
@@ -44,27 +41,26 @@ public class GameSodaTap : MonoBehaviour {
         {
             if (Chug >= 2.0f)
             {
-                Drinksr.sprite = D5;
+                Self.GetComponent<SpriteRenderer>().sprite = D5;
                 Win = 1;
                 Progress = 0;
             }
             else if (Chug >= 1.6f)
-                Drinksr.sprite = D4;
+                Self.GetComponent<SpriteRenderer>().sprite = D4;
             else if (Chug >= 1.2f)
-                Drinksr.sprite = D3;
+                Self.GetComponent<SpriteRenderer>().sprite = D3;
             else if (Chug >= 0.8f)
-                Drinksr.sprite = D2;
+                Self.GetComponent<SpriteRenderer>().sprite = D2;
             else if (Chug >= 0.4f)
-                Drinksr.sprite = D0;
+                Self.GetComponent<SpriteRenderer>().sprite = D0;
             else if (Chug > 0.0f)
-                Drinksr.sprite = D8;
+                Self.GetComponent<SpriteRenderer>().sprite = D8;
         }
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            Curtain.GetComponent<DownFlag>().enabled = true;
-            Curtain.GetComponent<PresentResults>().enabled = true;
-            Drink.GetComponent<GameSodaTap>().enabled = false;
+            Self.GetComponent<PresentResults>().enabled = true;
+            Self.GetComponent<GameSodaTap>().enabled = false;
         }
 
         else
@@ -81,7 +77,7 @@ public class GameSodaTap : MonoBehaviour {
             }
             else if (Progress != 0 && Chug > 0) 
             {
-                Drinksr.sprite = D7;
+                Self.GetComponent<SpriteRenderer>().sprite = D7;
             }
         }
     }

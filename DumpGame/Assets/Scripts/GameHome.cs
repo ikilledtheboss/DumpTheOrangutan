@@ -7,7 +7,7 @@ using UnityEngine.Playables;
 
 public class GameHome : MonoBehaviour {
 
-    public GameObject Self, Curtain;
+    public GameObject Self;
     public int Win;
     public float T;
     public Text ScoreText, LivesText, RuleText, TimeText;
@@ -15,12 +15,12 @@ public class GameHome : MonoBehaviour {
 
     void Start()
     {
+        Self.GetComponent<Button>().enabled = true;
         ScoreText.enabled = false;
         LivesText.enabled = false;
         RuleText.enabled = false;
         Win = 0;
         T = PlayerPrefs.GetFloat("PTime");
-        Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
     }
 
@@ -34,8 +34,7 @@ public class GameHome : MonoBehaviour {
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            Curtain.GetComponent<DownFlag>().enabled = true;
-            Curtain.GetComponent<PresentResults>().enabled = true;
+            Self.GetComponent<PresentResults>().enabled = true;
             Self.GetComponent<GameHome>().enabled = false;
         }
         else

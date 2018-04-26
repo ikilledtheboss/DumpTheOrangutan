@@ -118,6 +118,11 @@ PlayableDirector:
   m_PrefabParentObject: {fileID: 320906063538181276, guid: 88320947fca59b34592caf4d0fadc424,
     type: 2}
   m_PrefabInternal: {fileID: 1340034867}
+--- !u!1 &82337510 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1582128962720646, guid: 3844871727d19b8469c08b6ab9842787,
+    type: 2}
+  m_PrefabInternal: {fileID: 1654865783}
 --- !u!1 &312369864
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +310,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.5999998, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &593656612
 GameObject:
@@ -367,7 +372,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &680309617
 GameObject:
@@ -540,7 +545,7 @@ Transform:
   m_LocalScale: {x: 1.4560043, y: 1.1765686, z: 1.1765686}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1085245612 stripped
 GameObject:
@@ -720,7 +725,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4930621812823954, guid: 88320947fca59b34592caf4d0fadc424, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4930621812823954, guid: 88320947fca59b34592caf4d0fadc424, type: 2}
       propertyPath: m_LocalScale.x
@@ -748,6 +753,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88320947fca59b34592caf4d0fadc424, type: 2}
   m_IsPrefabParent: 0
+--- !u!320 &1361232617 stripped
+PlayableDirector:
+  m_PrefabParentObject: {fileID: 320807978664471794, guid: 3844871727d19b8469c08b6ab9842787,
+    type: 2}
+  m_PrefabInternal: {fileID: 1654865783}
 --- !u!1 &1459499360
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +771,8 @@ GameObject:
   - component: {fileID: 1459499362}
   - component: {fileID: 1459499366}
   - component: {fileID: 1459499365}
+  - component: {fileID: 1459499368}
+  - component: {fileID: 1459499367}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -792,7 +804,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1459499360}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -877,14 +889,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1459499360}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6674967340eb4c47ad8d1a05c9b220e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Win: 0
   Self: {fileID: 1459499360}
-  Curtain: {fileID: 2071325097}
   ScoreKeeper: {fileID: 0}
   T: 0
   ScoreText: {fileID: 1987644865}
@@ -892,6 +903,7 @@ MonoBehaviour:
   RuleText: {fileID: 680309618}
   TimeText: {fileID: 312369867}
   tt: 0
+  Drop: {fileID: 1085245618}
 --- !u!114 &1459499366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,6 +923,78 @@ MonoBehaviour:
   Keys: {fileID: 1085245612}
   Button: {fileID: 1459499360}
   Curtain: {fileID: 2071325097}
+--- !u!114 &1459499367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459499360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bf12fa750a4eb429fc12409e06e56a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StageSetUp: {fileID: 82337510}
+  Self: {fileID: 1459499360}
+  Score: 0
+  Lives: 0
+  Win: 0
+  rvalue1: 0
+  Game: 0
+  rvalue3: 0
+  rep1: 0
+  rep2: 0
+  rep3: 0
+  rep4: 0
+  orderrep: 0
+  orderset: 0
+  T: 0
+  timecheck: 0
+  Finish: 0
+  NextGame: 
+  Curtain: {fileID: 1481025377}
+--- !u!114 &1459499368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459499360}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d54527823f9bc40b36a6d5062770f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeText: {fileID: 0}
+  StageSetUp: {fileID: 82337510}
+  Up: {fileID: 1827878751}
+  Down: {fileID: 1841684152}
+  ScoreText: {fileID: 0}
+  LivesText: {fileID: 0}
+  RuleText: {fileID: 0}
+  Score: 0
+  Lives: 0
+  Win: 0
+  rvalue1: 0
+  rvalue2: 0
+  rvalue3: 0
+  rep1: 0
+  rep2: 0
+  rep3: 0
+  rep4: 0
+  orderrep: 0
+  orderset: 0
+  T: 0
+  timecheck: 0
+  Positive: 0
+  Finish: 0
+  NextGame: 
+  CurtainGood: {fileID: 1361232617}
+  CurtainBad: {fileID: 1703520346}
+--- !u!320 &1481025377 stripped
+PlayableDirector:
+  m_PrefabParentObject: {fileID: 320502090600354494, guid: 3844871727d19b8469c08b6ab9842787,
+    type: 2}
+  m_PrefabInternal: {fileID: 1654865783}
 --- !u!1 &1606700241
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +1029,7 @@ RectTransform:
   - {fileID: 680309620}
   - {fileID: 1459499361}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1090,6 +1174,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1654865783
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4451808999828254, guid: 3844871727d19b8469c08b6ab9842787, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451808999828254, guid: 3844871727d19b8469c08b6ab9842787, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451808999828254, guid: 3844871727d19b8469c08b6ab9842787, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451808999828254, guid: 3844871727d19b8469c08b6ab9842787, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451808999828254, guid: 3844871727d19b8469c08b6ab9842787, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451808999828254, guid: 3844871727d19b8469c08b6ab9842787, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451808999828254, guid: 3844871727d19b8469c08b6ab9842787, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451808999828254, guid: 3844871727d19b8469c08b6ab9842787, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3844871727d19b8469c08b6ab9842787, type: 2}
+  m_IsPrefabParent: 0
+--- !u!320 &1703520346 stripped
+PlayableDirector:
+  m_PrefabParentObject: {fileID: 320058797709008996, guid: 3844871727d19b8469c08b6ab9842787,
+    type: 2}
+  m_PrefabInternal: {fileID: 1654865783}
+--- !u!1 &1827878751 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1471089873205270, guid: 3844871727d19b8469c08b6ab9842787,
+    type: 2}
+  m_PrefabInternal: {fileID: 1654865783}
+--- !u!1 &1841684152 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1012803524512546, guid: 3844871727d19b8469c08b6ab9842787,
+    type: 2}
+  m_PrefabInternal: {fileID: 1654865783}
 --- !u!1 &1987644862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2071325098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,7 +1337,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeText: {fileID: 312369864}
-  Curtain: {fileID: 2071325097}
+  StageSetUp: {fileID: 0}
+  Up: {fileID: 0}
+  Down: {fileID: 0}
   ScoreText: {fileID: 1987644865}
   LivesText: {fileID: 1181934353}
   RuleText: {fileID: 680309618}
@@ -1205,6 +1348,7 @@ MonoBehaviour:
   Win: 0
   rvalue1: 0
   rvalue2: 0
+  rvalue3: 0
   rep1: 0
   rep2: 0
   rep3: 0
@@ -1212,8 +1356,12 @@ MonoBehaviour:
   orderrep: 0
   orderset: 0
   T: 0
+  timecheck: 0
+  Positive: 0
   Finish: 0
   NextGame: 
+  CurtainGood: {fileID: 0}
+  CurtainBad: {fileID: 0}
 --- !u!114 &2071325099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1301,7 +1449,7 @@ Transform:
   m_LocalScale: {x: 6.008619, y: 6.2427187, z: 6.2427187}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2071325103
 MonoBehaviour:

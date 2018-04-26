@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameWall : MonoBehaviour
 {
-    public GameObject Piece1,Piece2,Piece3,Piece4, Back, Curtain;
+    public GameObject Piece1,Piece2,Piece3,Piece4, Back;
     public Sprite FixWall, CrumbleWall;
     public int Progress, Win;
     public bool p1, p2, p3, p4, fail;
@@ -22,7 +22,6 @@ public class GameWall : MonoBehaviour
         Progress = 1;
         Win = 0;
         T = PlayerPrefs.GetFloat("PTime");
-        Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
         p1 = Piece1.GetComponent<ClickItem>().Clicked;
         p2 = Piece2.GetComponent<ClickItem>().Clicked;
@@ -79,8 +78,7 @@ public class GameWall : MonoBehaviour
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            Curtain.GetComponent<DownFlag>().enabled = true;
-            Curtain.GetComponent<PresentResults>().enabled = true;
+            Back.GetComponent<PresentResults>().enabled = true;
             Back.GetComponent<GameWall>().enabled = false;
         }
         else

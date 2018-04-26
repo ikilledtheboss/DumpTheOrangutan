@@ -23,7 +23,6 @@ public class GameSteak : MonoBehaviour
         RuleText.enabled = false;
         Win = 0;
         T = PlayerPrefs.GetFloat("PTime");
-        Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
     }
 
@@ -40,8 +39,7 @@ public class GameSteak : MonoBehaviour
         if(T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            Curtain.GetComponent<DownFlag>().enabled = true;
-            Curtain.GetComponent<PresentResults>().enabled = true;
+            self.GetComponent<PresentResults>().enabled = true;
             self.GetComponent<GameSteak>().enabled = false;
         }
 

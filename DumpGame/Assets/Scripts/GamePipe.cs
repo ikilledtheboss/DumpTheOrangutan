@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GamePipe : MonoBehaviour {
 
 
-    public GameObject Pipe1, Pipe2, Pipe3, Pipe4, r1, r2, r3, r4, b1, b2, b3, b4, d1, d2, d3 ,d4, Dump1, Dump2, pipe, Line, Curtain, ScoreKeeper;
+    public GameObject Pipe1, Pipe2, Pipe3, Pipe4, r1, r2, r3, r4, b1, b2, b3, b4, d1, d2, d3 ,d4, Dump1, Dump2, pipe, Self, Curtain, ScoreKeeper;
     public int Win;
     public Sprite s;
     public bool P1, P2, P3, P4, pp1, pp2, pp3, pp4;
@@ -121,9 +121,8 @@ public class GamePipe : MonoBehaviour {
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            Curtain.GetComponent<DownFlag>().enabled = true;
-            Curtain.GetComponent<PresentResults>().enabled = true;
-            Line.GetComponent<GamePipe>().enabled = false;
+            Self.GetComponent<PresentResults>().enabled = true;
+            Self.GetComponent<GamePipe>().enabled = false;
         }
         else
         {

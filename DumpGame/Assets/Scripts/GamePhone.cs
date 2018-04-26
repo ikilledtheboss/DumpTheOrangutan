@@ -30,7 +30,6 @@ public class GamePhone : MonoBehaviour
         C3 = Covfefe3.GetComponent<ClickItem>().Clicked;
         FlagDown = false;
         T = PlayerPrefs.GetFloat("PTime");
-        Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
     }
 
@@ -91,8 +90,7 @@ public class GamePhone : MonoBehaviour
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            Curtain.GetComponent<DownFlag>().enabled = true;
-            Curtain.GetComponent<PresentResults>().enabled = true;
+            Phone.GetComponent<PresentResults>().enabled = true;
             Phone.GetComponent<GamePhone>().enabled = false;
         }
         else

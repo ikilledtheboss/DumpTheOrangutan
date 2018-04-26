@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameMoney : MonoBehaviour
 {
 
-    public GameObject Money2, Money3, Money4, Pile, Pile22, Pile33, Curtain, ScoreKeeper;
+    public GameObject Money2, Money3, Money4, Self, Pile22, Pile33, Curtain, ScoreKeeper;
     public SpriteRenderer Pilesr;
     public Sprite Pile1, Pile2, Pile3, Pile4;
     public int Progress, Win, M1, M2, M3, M4;
@@ -22,12 +22,11 @@ public class GameMoney : MonoBehaviour
         RuleText.enabled = false;
         Progress = 0;
         Win = 0;
-        Pilesr = Pile.GetComponent<SpriteRenderer>();
+        Pilesr = Self.GetComponent<SpriteRenderer>();
         M2 = Money2.GetComponent<ClickDragItem>().Drag;
         M3 = Money3.GetComponent<ClickDragItem>().Drag;
         M4 = Money4.GetComponent<ClickDragItem>().Drag;
         T = PlayerPrefs.GetFloat("PTime");
-        Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
     }
 	
@@ -110,9 +109,8 @@ public class GameMoney : MonoBehaviour
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            Curtain.GetComponent<DownFlag>().enabled = true;
-            Curtain.GetComponent<PresentResults>().enabled = true;
-            Pile.GetComponent<GameMoney>().enabled = false;
+            Self.GetComponent<PresentResults>().enabled = true;
+            Self.GetComponent<GameMoney>().enabled = false;
         }
         else
         {

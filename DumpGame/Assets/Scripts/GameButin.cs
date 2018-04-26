@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameButin : MonoBehaviour
 {
-    public GameObject Button1, Button2, Button3, Store, Curtain;
+    public GameObject Button1, Button2, Button3, Self, Curtain;
     public int Progress, Win;
     public float T;
     public Text ScoreText, LivesText, RuleText, TimeText;
@@ -53,9 +53,8 @@ public class GameButin : MonoBehaviour
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            Curtain.GetComponent<DownFlag>().enabled = true;
-            Curtain.GetComponent<PresentResults>().enabled = true;
-            Store.GetComponent<GameButin>().enabled = false;
+            Self.GetComponent<PresentResults>().enabled = true;
+            Self.GetComponent<GameButin>().enabled = false;
         }
         else
         {

@@ -72,8 +72,7 @@ public class GameEarth : MonoBehaviour
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            Curtain.GetComponent<DownFlag>().enabled = true;
-            Curtain.GetComponent<PresentResults>().enabled = true;
+            Self.GetComponent<PresentResults>().enabled = true;
             Self.GetComponent<GameEarth>().enabled = false;
         }
         else

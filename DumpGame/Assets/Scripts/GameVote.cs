@@ -7,12 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class GameVote : MonoBehaviour
 {
-    public GameObject self, Curtain;
+    public GameObject self, ButtonWin, ButtonLose;
     string NextGame;
 
     void Start()
     {
-        Curtain.GetComponent<UpFlag>().enabled = true;
+        ButtonWin.GetComponent<Button>().enabled = true;
+        ButtonLose.GetComponent<Button>().enabled = true;
     }
 
     public void AnyoneWins()

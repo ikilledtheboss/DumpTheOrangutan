@@ -1,29 +1,32 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class PresentResults : MonoBehaviour
 {
-    public GameObject TimeText, Curtain;
+    public GameObject TimeText, StageSetUp, Up, Down;
     public Text ScoreText, LivesText, RuleText;
     public int Score, Lives, Win, rvalue1, rvalue2, rvalue3, rep1, rep2, rep3, rep4, orderrep, orderset;
     public float T;
-    public bool Finish;
+    public double timecheck;
+    public bool Positive, Finish;
     public string NextGame;
+    public PlayableDirector CurtainGood, CurtainBad;
 
     // Use this for initialization
     void Start()
     {
+        Positive = true;
+        StageSetUp.SetActive(true);
+        
         Finish = false;
-        TimeText.GetComponent<Countdown>().Start();
-        TimeText.GetComponent<Countdown>().enabled = true;
         Lives = PlayerPrefs.GetInt("PLives");
         Score = PlayerPrefs.GetInt("PScore");
         Win = PlayerPrefs.GetInt("Result");
-
+        timecheck = -1;
         if (Win == 1)
         {
             Score++;
@@ -64,108 +67,129 @@ public class PresentResults : MonoBehaviour
         if (Finish == true)
         {
             NextGame = "VoteGame";
-            RuleText.text = "VOTE FOR THE PRESIDENT";
+         //   RuleText.text = "VOTE FOR THE PRESIDENT";
         }
         else
         {
             rvalue2 = RandomValue();
+            PlayerPrefs.SetInt("CurrentGame", rvalue2);
+            if (rvalue2 <= 5)
+            {
+                Up.GetComponent<SpriteRenderer>().enabled = true;
+                Down.GetComponent<SpriteRenderer>().enabled = false;
+                CurtainGood.Play();
+                Positive = true;
+            }
+            else
+            {
+                Up.GetComponent<SpriteRenderer>().enabled = false;
+                Down.GetComponent<SpriteRenderer>().enabled = true; 
+                CurtainBad.Play();
+                Positive = false;
+            }
             if (rvalue2 == 0)
             {
                 NextGame = "GolfAnimatedGame";
-                RuleText.text = "DUMP RESORT: TAP at the right moment";
+              //  RuleText.text = "DUMP RESORT: TAP at the right moment";
             }
             else if (rvalue2 == 1)
             {
                 NextGame = "TextGame1";
-                RuleText.text = "COVFEFE: TAP the correct letters";
+              //  RuleText.text = "COVFEFE: TAP the correct letters";
             }
             else if (rvalue2 == 2)
             {
                 NextGame = "SodaGame";
-                RuleText.text = "CHUG DIET SODA: CLICK and HOLD soda";
+             //   RuleText.text = "CHUG DIET SODA: CLICK and HOLD soda";
             }
 
             else if (rvalue2 == 3)
             {
                 NextGame = "WallGame";
-                RuleText.text = "BUILD THE WALL: TAP to place missing bricks";
+              //  RuleText.text = "BUILD THE WALL: TAP to place missing bricks";
             }
             else if (rvalue2 == 4)
             {
                 NextGame = "GrabCatGame";
-                RuleText.text = "GRAB THE PUSSY: TAP to grab the pussy";
+              //  RuleText.text = "GRAB THE PUSSY: TAP to grab the pussy";
             }
 
             else if (rvalue2 == 5)
             {
                 NextGame = "SteakGame";
-                RuleText.text = "SHAKE THE KETCHUP! CLICk and DRAG to prepare your meal";
+              //  RuleText.text = "SHAKE THE KETCHUP! CLICk and DRAG to prepare your meal";
             }
 
             else if (rvalue2 == 6)
             {
                 NextGame = "ImmigrantsGame";
-                RuleText.text = "KEEP THOSE IMMIGRANTS OUT!: TAP on the immigrant";
+             //   RuleText.text = "KEEP THOSE IMMIGRANTS OUT!: TAP on the immigrant";
             }
 
             else if (rvalue2 == 7)
             {
                 NextGame = "KeyGame";
-                RuleText.text = "READY THE NUKES: TAP the keys in time";
+              //  RuleText.text = "READY THE NUKES: TAP the keys in time";
             }
 
             else if (rvalue2 == 8)
             {
                 NextGame = "GrabWomanGame";
-                RuleText.text = "GRAB THE PUSSY: TAP to grab the pussy";
+             //   RuleText.text = "GRAB THE PUSSY: TAP to grab the pussy";
             }
             else if (rvalue2 == 9)
             {
                 NextGame = "EarthGame";
-                RuleText.text = "CLICK THE USA to exit the Paris agreement";
+              //  RuleText.text = "CLICK THE USA to exit the Paris agreement";
             }
             else if (rvalue2 == 10)
             {
                 NextGame = "PipeGame";
-                RuleText.text = "Drag the pipes to the pipeline";
+              //  RuleText.text = "Drag the pipes to the pipeline";
             }
             else if (rvalue2 == 11)
             {
                 NextGame = "MoneyGame";
-                RuleText.text = "PORN STAR HUSH MONEY: CLICK and DRAG only 130,000 dollars";
+            //    RuleText.text = "PORN STAR HUSH MONEY: CLICK and DRAG only 130,000 dollars";
             }
             else if (rvalue2 == 12)
             {
                 NextGame = "ButinGame";
-                RuleText.text = "PROTECT BUTIN: CLICK to hide Butin";
+              //  RuleText.text = "PROTECT BUTIN: CLICK to hide Butin";
             }
 
             else if (rvalue2 == 13)
             {
                 NextGame = "AirportGame";
-                RuleText.text = "KEEP THOSE MUSLIMS OUT!: TAP on the muslim";
+             //   RuleText.text = "KEEP THOSE MUSLIMS OUT!: TAP on the muslim";
             }
         }
 
 
-        ScoreText.text = Score.ToString() + " POINTS";
-        LivesText.text = Lives.ToString() + " LIVES";
+     //   ScoreText.text = Score.ToString() + " POINTS";
+       // LivesText.text = Lives.ToString() + " LIVES";
         
     }
 
     
     void Update()
     {
-        if (T < 0)
-            end();
+        if(Positive == true)
+        {
+            if (CurtainGood.time >= 0.49 || (timecheck == CurtainGood.time && timecheck != 0))
+            {
+                SceneManager.LoadScene(NextGame);
+            }
+            timecheck = CurtainGood.time;
+        }
         else
-            T = TimeText.GetComponent<Countdown>().T;
-    }
-
-    void end()
-    {
-        SceneManager.LoadScene(NextGame);
-       // SceneManager.LoadScene("GolfAnimatedGame");
+        {
+            if (CurtainBad.time >= 0.49 || (timecheck == CurtainBad.time && timecheck != 0))
+            {
+                SceneManager.LoadScene(NextGame);
+            }
+            timecheck = CurtainBad.time;
+        }
     }
 
     int RandomValue()

@@ -23,7 +23,6 @@ public class GameBuildWall : MonoBehaviour
         Progress = 1;
         Win = 0;
         T = PlayerPrefs.GetFloat("PTime");
-        Curtain.GetComponent<UpFlag>().enabled = true;
         tt = T;
         Iteration = 0.03f;
     }
@@ -80,8 +79,7 @@ public class GameBuildWall : MonoBehaviour
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
-            Curtain.GetComponent<DownFlag>().enabled = true;
-            Curtain.GetComponent<PresentResults>().enabled = true;
+            Store.GetComponent<PresentResults>().enabled = true;
             Store.GetComponent<GameBuildWall>().enabled = false;
         }
         else
