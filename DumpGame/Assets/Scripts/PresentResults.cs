@@ -10,7 +10,7 @@ public class PresentResults : MonoBehaviour
     public GameObject TimeText, StageSetUp, Up, Down;
     public Text ScoreText, LivesText, RuleText;
     public int Score, Lives, Win, rvalue1, rvalue2, rvalue3, rep1, rep2, rep3, rep4, orderrep, orderset;
-    public float T;
+    public float T, Check1;
     public double timecheck;
     public bool Positive, Finish;
     public string NextGame;
@@ -21,7 +21,7 @@ public class PresentResults : MonoBehaviour
     {
         Positive = true;
         StageSetUp.SetActive(true);
-        
+        Check1 = 0;
         Finish = false;
         Lives = PlayerPrefs.GetInt("PLives");
         Score = PlayerPrefs.GetInt("PScore");
@@ -66,14 +66,17 @@ public class PresentResults : MonoBehaviour
         
         if (Finish == true)
         {
+            Up.GetComponent<SpriteRenderer>().enabled = true;
+            Down.GetComponent<SpriteRenderer>().enabled = false;
+            CurtainGood.Play();
+            Positive = true;
             NextGame = "VoteGame";
-         //   RuleText.text = "VOTE FOR THE PRESIDENT";
         }
         else
         {
             rvalue2 = RandomValue();
             PlayerPrefs.SetInt("CurrentGame", rvalue2);
-            if (rvalue2 <= 5)
+            if (rvalue2 <= 6)
             {
                 Up.GetComponent<SpriteRenderer>().enabled = true;
                 Down.GetComponent<SpriteRenderer>().enabled = false;
@@ -119,11 +122,10 @@ public class PresentResults : MonoBehaviour
                 NextGame = "SteakGame";
               //  RuleText.text = "SHAKE THE KETCHUP! CLICk and DRAG to prepare your meal";
             }
-
             else if (rvalue2 == 6)
             {
-                NextGame = "ImmigrantsGame";
-             //   RuleText.text = "KEEP THOSE IMMIGRANTS OUT!: TAP on the immigrant";
+                NextGame = "ButinGame";
+                //  RuleText.text = "PROTECT BUTIN: CLICK to hide Butin";
             }
 
             else if (rvalue2 == 7)
@@ -154,8 +156,8 @@ public class PresentResults : MonoBehaviour
             }
             else if (rvalue2 == 12)
             {
-                NextGame = "ButinGame";
-              //  RuleText.text = "PROTECT BUTIN: CLICK to hide Butin";
+                NextGame = "ImmigrantsGame";
+                //   RuleText.text = "KEEP THOSE IMMIGRANTS OUT!: TAP on the immigrant";
             }
 
             else if (rvalue2 == 13)
@@ -164,18 +166,14 @@ public class PresentResults : MonoBehaviour
              //   RuleText.text = "KEEP THOSE MUSLIMS OUT!: TAP on the muslim";
             }
         }
-
-
-     //   ScoreText.text = Score.ToString() + " POINTS";
-       // LivesText.text = Lives.ToString() + " LIVES";
-        
     }
 
     
     void Update()
     {
-        if(Positive == true)
+        if (Positive == true)
         {
+            Check1 = 1;
             if (CurtainGood.time >= 0.49 || (timecheck == CurtainGood.time && timecheck != 0))
             {
                 SceneManager.LoadScene(NextGame);
@@ -184,6 +182,7 @@ public class PresentResults : MonoBehaviour
         }
         else
         {
+            Check1 = 2;
             if (CurtainBad.time >= 0.49 || (timecheck == CurtainBad.time && timecheck != 0))
             {
                 SceneManager.LoadScene(NextGame);
@@ -202,34 +201,34 @@ public class PresentResults : MonoBehaviour
 
         rvalue1 = Random.Range(0, 4);
         if (orderset == 1)
-            rvalue2 = Random.Range(0, 6);
+            rvalue2 = Random.Range(0, 7);
         else if (orderset == 2)
         {
             if (rvalue1 == 0)
-                rvalue2 = Random.Range(6, 14);
+                rvalue2 = Random.Range(7, 14);
             else
-                rvalue2 = Random.Range(0, 6);
+                rvalue2 = Random.Range(0, 7);
         }
         else if (orderset == 3)
         {
             if (rvalue1 <= 1)
-                rvalue2 = Random.Range(6, 14);
+                rvalue2 = Random.Range(7, 14);
             else
-                rvalue2 = Random.Range(0, 6);
+                rvalue2 = Random.Range(0, 7);
         }
         else if (orderset == 4)
         {
             if (rvalue1 <= 2)
-                rvalue2 = Random.Range(6, 14);
+                rvalue2 = Random.Range(7, 14);
             else
-                rvalue2 = Random.Range(0, 6);
+                rvalue2 = Random.Range(0, 7);
         }
         //rvalue2 = 0;
         while(rvalue2 == rep1 || rvalue2 == rep2 || rvalue2 == rep3)
         {
             if (rvalue2 == 0)
-                rvalue2 = 5;
-            else if (rvalue2 == 5)
+                rvalue2 = 6;
+            else if (rvalue2 == 6)
                 rvalue2 = 13;
             else
                 rvalue2--;
@@ -250,7 +249,6 @@ public class PresentResults : MonoBehaviour
             PlayerPrefs.SetInt("Repeat3", rvalue2);
             PlayerPrefs.SetInt("CurrentRepeat", 1);
         }
-       // rvalue2 = 0;
         return rvalue2;
     }
 }

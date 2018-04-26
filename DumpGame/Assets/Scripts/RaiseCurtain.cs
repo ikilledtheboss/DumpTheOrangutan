@@ -5,15 +5,15 @@ using UnityEngine.Playables;
 
 public class RaiseCurtain : MonoBehaviour
 {
-    public GameObject StageSetUp, Self;
-    public int Score, Lives, Win, rvalue1, Game, rvalue3, rep1, rep2, rep3, rep4, orderrep, orderset;
+    public GameObject StageSetUp, Self, L1, L2, S1, S2, Liveshow, Scoreshow, Ruleshow;
+    public int Score, Lives, Game;
+    public Sprite n0, n1, n2, n3, n4, n5, n6, n7, n8, n9; 
     public float T;
     public double timecheck;
     public bool Finish;
     public string NextGame;
     public PlayableDirector Curtain;
-
-    // Use this for initialization
+    
     void Start()
     {
         Curtain.Play();
@@ -21,97 +21,62 @@ public class RaiseCurtain : MonoBehaviour
         Lives = PlayerPrefs.GetInt("PLives");
         Score = PlayerPrefs.GetInt("PScore");
         Game = PlayerPrefs.GetInt("CurrentGame");
+
+        if (Score >= 10)
+            S1.GetComponent<SpriteRenderer>().sprite = n1;
+        else
+            S1.GetComponent<SpriteRenderer>().sprite = n0;
+
+        if (Score % 10 == 9)
+            S2.GetComponent<SpriteRenderer>().sprite = n9;
+        else if (Score % 10 == 8)
+            S2.GetComponent<SpriteRenderer>().sprite = n8;
+        else if (Score % 10 == 7)
+            S2.GetComponent<SpriteRenderer>().sprite = n7;
+        else if (Score % 10 == 6)
+            S2.GetComponent<SpriteRenderer>().sprite = n6;
+        else if (Score % 10 == 5)
+            S2.GetComponent<SpriteRenderer>().sprite = n5;
+        else if (Score % 10 == 4)
+            S2.GetComponent<SpriteRenderer>().sprite = n4;
+        else if (Score % 10 == 3)
+            S2.GetComponent<SpriteRenderer>().sprite = n3;
+        else if (Score % 10 == 2)
+            S2.GetComponent<SpriteRenderer>().sprite = n2;
+        else if (Score % 10 == 1)
+            S2.GetComponent<SpriteRenderer>().sprite = n1;
+        else if (Score % 10 == 0)
+            S2.GetComponent<SpriteRenderer>().sprite = n0;
+
+
+        if (Lives >= 10)
+            L1.GetComponent<SpriteRenderer>().sprite = n1;
+        else
+            L1.GetComponent<SpriteRenderer>().sprite = n0;
+
+        if (Lives % 10 == 9)
+            L2.GetComponent<SpriteRenderer>().sprite = n9;
+        else if (Lives % 10 == 8)
+            L2.GetComponent<SpriteRenderer>().sprite = n8;
+        else if (Lives % 10 == 7)
+            L2.GetComponent<SpriteRenderer>().sprite = n7;
+        else if (Lives % 10 == 6)
+            L2.GetComponent<SpriteRenderer>().sprite = n6;
+        else if (Lives % 10 == 5)
+            L2.GetComponent<SpriteRenderer>().sprite = n5;
+        else if (Lives % 10 == 4)
+            L2.GetComponent<SpriteRenderer>().sprite = n4;
+        else if (Lives % 10 == 3)
+            L2.GetComponent<SpriteRenderer>().sprite = n3;
+        else if (Lives % 10 == 2)
+            L2.GetComponent<SpriteRenderer>().sprite = n2;
+        else if (Lives % 10 == 1)
+            L2.GetComponent<SpriteRenderer>().sprite = n1;
+        else if (Lives % 10 == 0)
+            L2.GetComponent<SpriteRenderer>().sprite = n0;
+
         timecheck = -1;
-
-        if (Score >= 15)
-        {
-           
-        }
-        else if (Lives <= 0)
-        {
-
-        }
-        else if (Game == 0)
-        {
-            NextGame = "GolfAnimatedGame";
-            //  RuleText.text = "DUMP RESORT: TAP at the right moment";
-        }
-        else if (Game == 1)
-        {
-            NextGame = "TextGame1";
-            //  RuleText.text = "COVFEFE: TAP the correct letters";
-        }
-        else if (Game == 2)
-        {
-            NextGame = "SodaGame";
-            //   RuleText.text = "CHUG DIET SODA: CLICK and HOLD soda";
-        }
-
-        else if (Game == 3)
-        {
-            NextGame = "WallGame";
-            //  RuleText.text = "BUILD THE WALL: TAP to place missing bricks";
-        }
-        else if (Game == 4)
-        {
-            NextGame = "GrabCatGame";
-            //  RuleText.text = "GRAB THE PUSSY: TAP to grab the pussy";
-        }
-
-        else if (Game == 5)
-        {
-            NextGame = "SteakGame";
-            //  RuleText.text = "SHAKE THE KETCHUP! CLICk and DRAG to prepare your meal";
-        }
-
-        else if (Game == 6)
-        {
-            NextGame = "ImmigrantsGame";
-            //   RuleText.text = "KEEP THOSE IMMIGRANTS OUT!: TAP on the immigrant";
-        }
-
-        else if (Game == 7)
-        {
-            NextGame = "KeyGame";
-            //  RuleText.text = "READY THE NUKES: TAP the keys in time";
-        }
-
-        else if (Game == 8)
-        {
-            NextGame = "GrabWomanGame";
-            //   RuleText.text = "GRAB THE PUSSY: TAP to grab the pussy";
-        }
-        else if (Game == 9)
-        {
-            NextGame = "EarthGame";
-            //  RuleText.text = "CLICK THE USA to exit the Paris agreement";
-        }
-        else if (Game == 10)
-        {
-            NextGame = "PipeGame";
-            //  RuleText.text = "Drag the pipes to the pipeline";
-        }
-        else if (Game == 11)
-        {
-            NextGame = "MoneyGame";
-            //    RuleText.text = "PORN STAR HUSH MONEY: CLICK and DRAG only 130,000 dollars";
-        }
-        else if (Game == 12)
-        {
-            NextGame = "ButinGame";
-            //  RuleText.text = "PROTECT BUTIN: CLICK to hide Butin";
-        }
-
-        else if (Game == 13)
-        {
-            NextGame = "AirportGame";
-            //   RuleText.text = "KEEP THOSE MUSLIMS OUT!: TAP on the muslim";
-        }
-        //   ScoreText.text = Score.ToString() + " POINTS";
-        // LivesText.text = Lives.ToString() + " LIVES";
-
     }
-
 
     void Update()
     {
@@ -119,6 +84,7 @@ public class RaiseCurtain : MonoBehaviour
         {
             Finish = false;
             StageSetUp.SetActive(false);
+
             if (Score >= 15)
             {
                 Self.GetComponent<GameVote>().enabled = true;
@@ -152,7 +118,7 @@ public class RaiseCurtain : MonoBehaviour
 
             else if (Game == 6)
             {
-                Self.GetComponent<GameHome>().enabled = true;
+                Self.GetComponent<GameButin>().enabled = true;
             }
 
             else if (Game == 7)
@@ -178,16 +144,24 @@ public class RaiseCurtain : MonoBehaviour
             }
             else if (Game == 12)
             {
-                Self.GetComponent<GameButin>().enabled = true;
+                Self.GetComponent<GameHome>().enabled = true;
             }
-
             else if (Game == 13)
             {
                 Self.GetComponent<GameAirport>().enabled = true;
             }
+
+            Liveshow.GetComponent<SpriteRenderer>().enabled = false;
+            Scoreshow.GetComponent<SpriteRenderer>().enabled = false;
+            Ruleshow.GetComponent<SpriteRenderer>().enabled = false;
+            L1.GetComponent<SpriteRenderer>().enabled = false;
+            L2.GetComponent<SpriteRenderer>().enabled = false;
+            S1.GetComponent<SpriteRenderer>().enabled = false;
+            S2.GetComponent<SpriteRenderer>().enabled = false;
+
+
+
             Self.GetComponent<RaiseCurtain>().enabled = false;
-            //GameStart
-            // SceneManager.LoadScene(NextGame);
         }
         timecheck = Curtain.time;
     }

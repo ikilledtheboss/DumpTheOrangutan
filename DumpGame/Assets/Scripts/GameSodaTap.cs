@@ -56,6 +56,7 @@ public class GameSodaTap : MonoBehaviour {
             else if (Chug > 0.0f)
                 Self.GetComponent<SpriteRenderer>().sprite = D8;
         }
+
         if (T < 0)
         {
             PlayerPrefs.SetInt("Result", Win);
