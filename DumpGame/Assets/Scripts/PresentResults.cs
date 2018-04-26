@@ -14,7 +14,7 @@ public class PresentResults : MonoBehaviour
     public double timecheck;
     public bool Positive, Finish;
     public string NextGame;
-    public PlayableDirector CurtainGood, CurtainBad;
+    public PlayableDirector CurtainGood, CurtainBad, Success, Fail;
 
     // Use this for initialization
     void Start()
@@ -27,6 +27,7 @@ public class PresentResults : MonoBehaviour
         Score = PlayerPrefs.GetInt("PScore");
         Win = PlayerPrefs.GetInt("Result");
         timecheck = -1;
+
         if (Win == 1)
         {
             Score++;
@@ -37,7 +38,15 @@ public class PresentResults : MonoBehaviour
             Lives--;
             PlayerPrefs.SetInt("PLives", Lives);
         }
-        
+
+        if(Lives != 3 || Score != 0)
+        {
+            if (Win == 1)
+                Success.Play();
+            else
+                Fail.Play();
+        }
+
         if (Score == 15)
             Finish = true;
         if (Lives == 0)
@@ -72,6 +81,16 @@ public class PresentResults : MonoBehaviour
             Positive = true;
             NextGame = "VoteGame";
         }
+
+        else if (Lives == 0)
+        {
+            Up.GetComponent<SpriteRenderer>().enabled = false;
+            Down.GetComponent<SpriteRenderer>().enabled = true;
+            CurtainBad.Play();
+            Positive = false;
+            NextGame = "LoseScreen";
+        }
+
         else
         {
             rvalue2 = RandomValue();

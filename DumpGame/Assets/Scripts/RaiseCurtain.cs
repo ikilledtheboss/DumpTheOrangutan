@@ -5,7 +5,7 @@ using UnityEngine.Playables;
 
 public class RaiseCurtain : MonoBehaviour
 {
-    public GameObject StageSetUp, Self, L1, L2, S1, S2, Liveshow, Scoreshow, Ruleshow;
+    public GameObject StageSetUp, Self, L1, L2, S1, S2, Liveshow, Scoreshow, Ruleshow, hp3, hp2, hp1, Healthbar;
     public int Score, Lives, Game;
     public Sprite n0, n1, n2, n3, n4, n5, n6, n7, n8, n9; 
     public float T;
@@ -75,6 +75,14 @@ public class RaiseCurtain : MonoBehaviour
         else if (Lives % 10 == 0)
             L2.GetComponent<SpriteRenderer>().sprite = n0;
 
+        if (Lives >= 3)
+            Healthbar = hp3;
+        else if (Lives == 2)
+            Healthbar = hp2;
+        else
+            Healthbar = hp1;
+        Healthbar.SetActive(true);
+        Healthbar.GetComponent<PlayableDirector>().Play();
         timecheck = -1;
     }
 
@@ -158,8 +166,8 @@ public class RaiseCurtain : MonoBehaviour
             L2.GetComponent<SpriteRenderer>().enabled = false;
             S1.GetComponent<SpriteRenderer>().enabled = false;
             S2.GetComponent<SpriteRenderer>().enabled = false;
-
-
+            Healthbar.GetComponent<PlayableDirector>().Stop();
+            Healthbar.SetActive(false);
 
             Self.GetComponent<RaiseCurtain>().enabled = false;
         }
