@@ -8,25 +8,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MainMenu.unity
     guid: 44d1085bcfc349b48bf5cdde6110ebc6
-  - enabled: 1
+  - enabled: 0
     path: Assets/StageScene.unity
     guid: f0e7c1294ff595d4986274914d528ae4
   - enabled: 1
     path: Assets/TextGame1.unity
     guid: 0d5e24e090196074c9317ce5d8384e7c
-  - enabled: 1
+  - enabled: 0
     path: Assets/TextGame2.unity
     guid: 08dba0eafa1ee864892baa070ca30b4e
-  - enabled: 1
+  - enabled: 0
     path: Assets/TextGame3.unity
     guid: c9b1305f79b81a44ab299d9936275d09
-  - enabled: 1
+  - enabled: 0
     path: Assets/GolfGame.unity
     guid: 0591c1b2a38fae74eb14b7fd7f843031
-  - enabled: 1
+  - enabled: 0
     path: Assets/HomeGame.unity
     guid: 9cc8c1b451246a8478dd4e08c0e0dd66
-  - enabled: 1
+  - enabled: 0
     path: Assets/ImmigrantGame.unity
     guid: f437cfd204670a94498f825832c9c425
   - enabled: 1
@@ -71,7 +71,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PipeGame.unity
     guid: 826add491eb21f64097f5bbda4f81ebf
-  - enabled: 1
+  - enabled: 0
     path: Assets/GameTemplate.unity
     guid: fb8efd5c2155b5d49b5203025526fb85
   - enabled: 1
